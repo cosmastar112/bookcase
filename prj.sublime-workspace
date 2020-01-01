@@ -1,0 +1,1006 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cmd",
+				"cmd_command\tabc"
+			],
+			[
+				"print",
+				"print_r\tabc"
+			],
+			[
+				"ec",
+				"echo\techo \"…\""
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"co",
+				"console.log"
+			],
+			[
+				"toLocale",
+				"toLocaleString\tfn "
+			],
+			[
+				"fon",
+				"font-size\tproperty"
+			],
+			[
+				"sc",
+				"scripts"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"cat",
+				"catch"
+			],
+			[
+				"jso",
+				"json_encode"
+			],
+			[
+				"fil",
+				"filmData\t? "
+			],
+			[
+				"spe",
+				"speciesInFilm\t? "
+			],
+			[
+				"s",
+				"species"
+			],
+			[
+				"spec",
+				"specieName"
+			],
+			[
+				"isC",
+				"isCatsInSpeciesFilm"
+			],
+			[
+				"pr",
+				"prototype\t{} "
+			],
+			[
+				"f",
+				"f\tAnonymous Function"
+			],
+			[
+				"wa",
+				"watch"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "controllers/BooksController.php",
+			"settings":
+			{
+				"buffer_size": 535,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/books/index.php",
+			"settings":
+			{
+				"buffer_size": 144,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"xde",
+				"Xdebug: Start Debugging"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"sub",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"file",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remoe",
+				"Package Control: Remove Package"
+			],
+			[
+				"sublimelinter",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/webserver/OSPanel/domains/bookcase",
+		"/D/webserver/OSPanel/domains/bookcase/config",
+		"/D/webserver/OSPanel/domains/bookcase/controllers",
+		"/D/webserver/OSPanel/domains/bookcase/models",
+		"/D/webserver/OSPanel/domains/bookcase/views"
+	],
+	"file_history":
+	[
+		"/D/webserver/OSPanel/domains/bookcase/models/Register.php",
+		"/D/webserver/OSPanel/domains/bookcase/models/Book.php",
+		"/D/webserver/OSPanel/domains/bookcase/config/db.php",
+		"/D/Apache24/htdocs/fastcgi-test/index.php",
+		"/C/Users/Илья/Desktop/tmp.txt",
+		"/D/Apache24/conf/extra/httpd-fcgid.conf",
+		"/C/php/php-fcgi-test.ini",
+		"/D/Apache24/conf/httpd.conf",
+		"/D/UnityEditor/Unity/Editor/Data/il2cpp/libil2cpp/os/Posix/SocketImpl.cpp",
+		"/D/UnityEditor/Unity/Editor/Data/il2cpp/MapFileParser/GCC/GCCSymbolParser.cpp",
+		"/D/UnityEditor/Unity/Editor/Data/il2cpp/MapFileParser/main.cpp",
+		"/D/UnityEditor/Unity/Editor/Data/il2cpp/MapFileParser/Driver.cpp",
+		"/D/Apache24/logs/error.log",
+		"/D/Apache24/logs/access.log",
+		"/C/php/php_errors.log",
+		"/D/Apache24/cgi-bin/printenv.pl",
+		"/C/php/php_errors.lo",
+		"/D/TEMP/Temp1_mod_fcgid-2.3.9a-2.4.x-x64-vc14.zip/Apache24/conf/extra/httpd-fcgid.conf",
+		"/D/Apache24/htdocs/basic/controllers/TestController.php",
+		"/D/Apache24/htdocs/basic/web/index.php",
+		"/D/Apache24/htdocs/basic/views/test/index.php",
+		"/C/Users/Илья/Desktop/СИПРМП/!Информация/Программа для создания сборок/Программа для создания сборок.txt",
+		"/C/php/php.ini",
+		"/H/РАБОТА/ПОЧТА/HPSM.txt",
+		"/H/РАБОТА/ПОЧТА/Новый текстовый документ.txt",
+		"/H/РАБОТА/ЕСПП.txt",
+		"/H/РАБОТА/ПОЧТА/UZ-130119.TXT",
+		"/H/РАБОТА/ПОЧТА/GMAIL.txt",
+		"/D/Projects/projects/otmechalka/src/ui/Otmechalka.java",
+		"/D/Projects/sisters/apk.bat",
+		"/D/Projects/docs_andrey_penin/ReadMe.txt",
+		"/D/Projects/classes_states/src/classes/animation.lua",
+		"/D/Projects/classes_states/src/classes/state.lua",
+		"/D/Projects/classes_states/ReadMe.txt",
+		"/D/xampp/htdocs/fruitslingshot/src/game_objects/stars.js",
+		"/D/xampp/htdocs/fruitslingshot/src/game_objects/belt.js",
+		"/D/xampp/htdocs/fruitslingshot/src/game_objects/binder.js",
+		"/D/xampp/htdocs/fruitslingshot/src/game_objects/bomb.js",
+		"/D/xampp/htdocs/abap/Новый текстовый документ.sql",
+		"/C/Users/Илья/Desktop/Т/СИПР МП/Пример входных параметров.txt",
+		"/C/Users/Илья/Desktop/СИПРМП/!Информация/Пароль.txt",
+		"/C/Users/Илья/Desktop/Т/СИПР МП/Пароль к архиву.txt",
+		"/C/Users/Илья/Desktop/Т/Отчеты на сборку от заказчика/На сборку СИПР 1.2.0/Новый текстовый документ.txt",
+		"/C/Users/Илья/Desktop/СИПРМП/Программа для создания сборок/Программа для создания сборок.txt",
+		"/C/Users/Илья/Desktop/СИПРМП/Программа для создания сборок/Программа для сборок.txt",
+		"/D/TEMP/Temp1_Сборки.zip/SIPR/SIPRMP-1.4.3/siprmp-installer-0.6.8.nsi",
+		"/D/Projects/SIPR/SIPRMP-0.8.5/siprmp-installer-0.1.9.nsi",
+		"/D/Projects/SIPR/SIPRMP-0.8.5/SVN.txt",
+		"/D/Projects/SIPR/SIPRMP-0.8.4/ReadMe.txt",
+		"/D/Projects/SIPR/SIPRMP-0.8.4/siprmp-installer-0.1.8.nsi",
+		"/D/Projects/SIPR/SIPRMP-0.8.3/siprmp-installer-0.1.7.nsi",
+		"/D/Projects/SIPR/SIPRMP-0.8.3/ФАЙЛЫ ПРОЕКТА.txt",
+		"/D/Projects/SIPR/SIPRMP-0.8.2/siprmp-installer-0.1.6.nsi",
+		"/D/Projects/SIPR/SIPRMP-0.8.2/ReadMe.txt",
+		"/D/Projects/SIPR/SIPRMP-0.8.1/siprmp-installer-0.1.5.nsi",
+		"/D/Projects/SIPR/SIPRMP-0.8.1/ReadMe.txt",
+		"/D/Projects/SIPR/SIPRMP-0.7.2/siprmp-installer-0.1.4.nsi",
+		"/D/Projects/SIPR/SIPRMP-0.7.2/ReadMe.txt",
+		"/D/Projects/SIPR/SIPRMP-0.7.0717/siprmp-installer-0.1.2.nsi",
+		"/D/Projects/SIPR/SIPRMP-0.7.0717/Версии.txt",
+		"/D/Projects/sipr-shell/МЮСЛИ/Заметки.txt",
+		"/C/Users/Илья/Downloads/параметры.txt",
+		"/C/Users/Илья/Downloads/ТЗ frontend js.txt",
+		"/C/Users/Илья/Downloads/Source.cpp",
+		"/C/Users/Илья/Downloads/periphery.sql",
+		"/C/Users/Илья/Downloads/devids.txt",
+		"/C/Users/Илья/Downloads/log.txt",
+		"/D/TEMP/Temp1_дебагер.zip/дебагер/readme.txt",
+		"/C/Users/Илья/Downloads/library1.sql",
+		"/D/TEMP/Temp1_fly_v02.zip/fly/src/fly.lua",
+		"/D/ren.cmd",
+		"/C/Users/Илья/Downloads/DefaultServices.cmd",
+		"/D/TEMP/Temp1_Kenilli_T._Intellektualnyi2._Spisok_Shindlera.fb2.zip/Kenilli_T._Intellektualnyi2._Spisok_Shindlera.fb2",
+		"/D/log.txt",
+		"/D/Apache24/htdocs/basic/runtime/logs/app.log",
+		"/C/php/install.txt",
+		"/D/Apache24/htdocs/debugger-test/phpcheck.php",
+		"/D/Apache24/htdocs/debugger-test/index.html",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/D/Apache24/htdocs/basic/views/site/index.php",
+		"/H/вован/Новый текстовый документ.txt",
+		"/D/Apache24/htdocs/basic/web/.htaccess",
+		"/D/webserver/OSPanel/domains/printers/basic/composer.json",
+		"/D/Apache24/htdocs/debugger-test/index.php",
+		"/D/TEMP/18e190413af045db88dfbd29609eb877.db.ses",
+		"/D/TEMP/Temp1_php-7.2.25-Win32-VC15-x64.zip/install.txt",
+		"/C/php/php.ini-development",
+		"/D/Apache24/.gitignore",
+		"/D/Apache24/conf/mime.types",
+		"/D/myserver/Apache24/conf/httpd.conf",
+		"/D/myserver/Apache24/htdocs/test/index.html",
+		"/D/xampp/apache/conf/httpd.conf",
+		"/D/myserver/Apache24/conf/extra/httpd-vhosts.conf",
+		"/D/xampp/apache/conf/extra/httpd-vhosts.conf",
+		"/D/xampp/apache/conf/extra/httpd-xampp.conf",
+		"/D/webserver/OSPanel/domains/php-examples/debug/index.php",
+		"/D/webserver/OSPanel/domains/php-examples/debug/prj.sublime-project",
+		"/C/Users/Илья/AppData/Roaming/Sublime Text 3/Packages/User/Xdebug.sublime-settings",
+		"/C/Users/Илья/AppData/Roaming/Sublime Text 3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/D/PHP/projects/autoloader-example/prj.sublime-project",
+		"/C/Users/Илья/AppData/Roaming/Sublime Text 3/Packages/All Autocomplete/All Autocomplete.sublime-settings",
+		"/D/PHP/projects/call-nonstatic-as-static/index.php",
+		"/D/PHP/projects/call-nonstatic-as-static/Test.php",
+		"/D/PHP/projects/autoloader-example/Test.php",
+		"/D/PHP/projects/autoloader-example/index.php",
+		"/D/nodejs/modules/user.js",
+		"/D/nodejs/modules/hello.js",
+		"/C/Program Files/nodejs/node_modules/npm/node_modules/qs/lib/index.js",
+		"/C/Program Files/nodejs/node_modules/npm/node_modules/qs/package.json",
+		"/C/Program Files/nodejs/node_modules/npm/node_modules/qs/dist/qs.js",
+		"/D/GitHub/es-modules-todomvc/docs/controller.js",
+		"/D/GitHub/es-modules-todomvc/docs/todoapp.css",
+		"/D/GitHub/es-modules-todomvc/docs/index.html",
+		"/D/GitHub/es-modules-todomvc/package.json",
+		"/D/webserver/OSPanel/domains/vue-books/index.html",
+		"/D/webserver/OSPanel/domains/vue-js/index.html",
+		"/D/GitHub/es-modules-todomvc/docs/view.js",
+		"/D/GitHub/es-modules-todomvc/karma.conf.js",
+		"/D/Projects/SIPR/SIPRMP-1.4.4/src/help/Releases.html",
+		"/D/TEMP/7zOCF1A28A2/Прочесть.txt",
+		"/D/webserver/OSPanel/domains/vue-js/node_modules/vue/package.json",
+		"/D/GitHub/task__cats_js/index.html",
+		"/D/GitHub/task__cats_js/scripts/js/classes/Consts.js",
+		"/D/GitHub/task__cats_js/scripts/css/main.css",
+		"/D/GitHub/task__cats_js/scripts/js/index.js",
+		"/D/webserver/OSPanel/domains/vue-js/package-lock.json",
+		"/D/Projects/SIPR/SIPRMP-1.4.3/src/help/Releases.html",
+		"/D/Projects/SIPR/SIPRMP-1.4.3/siprmp-installer-0.6.8.nsi"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ListView",
+			"GridView",
+			"\t",
+			"index",
+			"alive",
+			"keep",
+			"50",
+			"48",
+			"47",
+			"46",
+			"45",
+			"44",
+			"43",
+			"42",
+			"41",
+			"40",
+			"50",
+			"49",
+			"48",
+			"47",
+			"46",
+			"45",
+			"44",
+			"43",
+			"42",
+			"41",
+			"40",
+			"execution",
+			"\\",
+			"php_err",
+			"stack",
+			"logging",
+			"display_",
+			"error_log",
+			"\\",
+			"include",
+			"Location",
+			">\n",
+			",",
+			"1",
+			"PHP_INT_SIZE",
+			">\";\n",
+			"'",
+			"output_buffering",
+			"C:",
+			"D:",
+			"zend",
+			"zend_extension",
+			"zend_extension=",
+			"apache",
+			"php",
+			"IfVersio",
+			"IfModule",
+			"IfDefine",
+			"SRVROOT",
+			"Define",
+			"Include",
+			"\\",
+			"NameVirtualHost ",
+			"name",
+			"#Virtual hosts\nInclude conf/extra/httpd-vhosts.conf",
+			"VirtualHost",
+			"virt",
+			"SRVROOT",
+			"ServerRoot",
+			"ssl"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "controllers/BooksController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 535,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								410,
+								410
+							]
+						],
+						"settings":
+						{
+							"SL.30.region_keys":
+							[
+								"sublime_linter.protected_regions",
+								"SL.htmltidy.Highlights.|d12614e1a2f4176179cb107a20fd865d00164c57d794fe23cad56d530b7a9e74|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|60ed4a132ab4057532f1e354635e74b80c67bddd28ae48f5f73872c2ac2afd43|region.redish markup.error.sublime_linter|32",
+								"SL.htmltidy.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.phpcs.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"SL.phpcs.Highlights.|abb06c84f9fc20850b756ec14a5e8c171e4f934ace1a3e10a4e9ef92680667f2|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|61a236b08d316089866c6bd6162b1e56883d129c274928b0773319c171bb2389|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|6b68bd20bf0a39833ab69721b32268b619b6d44f8f27f5c03bbb6cb36cfb82c6|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|830264f8d618215ea5a44b969f85efcd79fa7e1aafdd96bf376e2343b5a48085|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|d7ddf34915d598ae742f1ba4890a4d00a32806eccd5a621e23119b511f406b30|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|c7309ece2307f9ff1fc21cbd1f34df89cf4bd7b989a32a8b725722e43e67a63f|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|b961cfd685ed7f663040abd3569ee68c4e47b1397aa82c69600ea32d8cf210d6|region.redish markup.error.sublime_linter|32"
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										410,
+										411
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/square_bracket.png",
+										"region.bluish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										362,
+										363
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/books/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								48,
+								48
+							]
+						],
+						"settings":
+						{
+							"SL.31.region_keys":
+							[
+								"sublime_linter.protected_regions",
+								"SL.phpcs.Highlights.|4c9d456d90363b433e30f6a6b384f07a1f622dd8c6674aa989a1c630a81a6335|region.redish markup.error.sublime_linter|32",
+								"SL.htmltidy.Highlights.|a9f60c607dbb3dbe440f9bb2eef49276194f13d5f55e0a6c220147729f903ded|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"SL.htmltidy.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.phpcs.Highlights.|d6d813f304bce00f35610af4da397cdda9b010c87d70481893bad24f876beae1|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|0b31a5b72c8917001a132e314c318e413ef296fc3555ffd00731deec7fdb6bdc|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|b86f597d50fb49d9aa5a7fc8c19c42a44481741e665a9c2c3944b69146811144|region.redish markup.error.sublime_linter|32"
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 171.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.xdebug":
+	{
+		"height": 126.0
+	},
+	"pinned_build_system": "",
+	"project": "prj.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ht",
+				"docs\\index.html"
+			],
+			[
+				"main",
+				"scripts\\css\\main.css"
+			],
+			[
+				"c",
+				"scripts\\js\\classes\\Consts.js"
+			],
+			[
+				"view",
+				"scripts\\js\\classes\\View.js"
+			],
+			[
+				"prepa",
+				"scripts\\js\\classes\\PrepareData.js"
+			],
+			[
+				"table",
+				"scripts\\css\\table.css"
+			],
+			[
+				"prepared",
+				"scripts\\js\\tests\\prepared.js"
+			],
+			[
+				"prepe",
+				"scripts\\js\\node_modules\\events\\tests\\prepend.js"
+			],
+			[
+				"тз",
+				"task\\ТЗ frontend js.txt"
+			],
+			[
+				"ut",
+				"scripts\\js\\utils.js"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"utils",
+				"scripts\\js\\utils.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"last_automatic_layout":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"37":
+				{
+					"group": 0,
+					"index": 0
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 274.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
