@@ -70,58 +70,53 @@ class BookController extends Controller
      * существует, выводится ошибка. Попытка сохранения модели предпринимается при 
      * соблюдении условий: книга НЕ СУЩЕСТВУЕТ и автор СУЩЕСТВУЕТ
      *
-     * Параметр author в POST-массиве используется для поиска значения, которое 
-     * будет загружено в модель и в дальнейшем сохранено.
+     * В модели Book создано поле author_name, которого нет в таблице в БД.
+     * Значение этого параметра передается вместе формой и используется для поиска
+     * значения, которое будет загружено в модель и в дальнейшем сохранено.
      *
      * @return mixed
      */
-    public function actionCreate()
-    {
+    public function actionCreate() {
         $model = new Book();
 
-        $params = Yii::$app->request->post();
-        // var_dump($params);
+        $params = Yii::$app->request->post('Book');
 
-        // Проверяю значение поля формы, в котором хранится название книги
-        $title = $params['Book']['title'];
-        $isBookExist = Book::find()
-            ->where(['title' => $title])
-            ->one();
+        if (isset($params)) {
 
-        // Если книга уже есть в таблице, возвращаю ошибку
-        if ($isBookExist !== null) {
-            $err = "Книга '{$title}' уже существует в таблице";
-            // значения введенных полей для заполнения полей формы после ошибки
-            if ( isset($params['author']) ) {
-                $formParams = $this->getFormParams($title, $params['author']);
-            }
-            // вывод формы с ошибкой; также передаю значения введенных ранее полей
-            return $this->renderError($model, $err, $formParams);
-        }
-        // var_dump($isBookExist);
+            // Проверяю значение поля формы с названием книги
+            $title = $params['title'];
+            // Есть книга с таким названием в таблице в БД?
+            $isBookExist = Book::find()
+                ->where(['title' => $title])
+                ->one();
 
-        // Проверяю значение поля формы, в котором хранится имя автора
-        if (isset($params['author']) && $params['author'] !== '') {
-            // Получаю код автора (если есть)
-            $authorId = $this->getAuthorId($params['author']);
-
-            if ($authorId !== null) {
-                // Подстановка результата
-                $params['Book']['author_id'] = $authorId;
-                // var_dump($params['Book']);
-
-                // Загружаю данные в модель
-                $model->attributes = $params['Book'];
-                // сохраняю модель и возвращаю ответ
-                return $this->saveModel($model);
-            } else {
-                // В случае если автор не был найден вернуть ошибку
-                $err = "Не найдено автора по имени '{$params['author']}'";
-                // значения введенных ранее полей
-                $formParams = $this->getFormParams($title, $params['author']);
-                // вывод формы с ошибкой;также передаю значений введенных ранее полей
+            // Если книга уже есть в таблице, возвращаю ошибку
+            if ($isBookExist !== null) {
+                $err = "Книга '{$title}' уже существует в таблице";
+                // передаю ранее введенные в форму значения для повторного заполнения
+                // полей формы после рендеринга ошибки
+                $formParams = $this->getFormParams($title, $params['author_name']);
                 return $this->renderError($model, $err, $formParams);
             }
+
+            // Ищу автора по введенному имени
+            $authorId = $this->getAuthorId($params['author_name']);
+            if ($authorId === null) {
+                // Возвращаю ошибку если автор не был найден 
+                $err = "Не найдено автора по имени '{$params['author_name']}'";
+                // передаю ранее введенные в форму значения для повторного заполнения
+                // полей формы после рендеринга ошибки
+                $formParams = $this->getFormParams($title, $params['author_name']);
+                return $this->renderError($model, $err, $formParams);
+            }
+
+            // Если автор найден
+            $params['author_id'] = $authorId;
+            // var_dump($params);
+            // загружаю значение (ID автора) в модель
+            $model->attributes = $params;
+            // и вовзаращаю результат сохранения модели
+            return $this->saveModelResult($model);
         }
 
         return $this->render('create', [
@@ -130,25 +125,7 @@ class BookController extends Controller
     }
 
     /**
-     * Создать массив введенных ранее значений формы для повторного заполнения 
-     * формы при появлении ошибки.
-     *
-     * @param string $title
-     * @param string $author
-     *
-     * @return array
-     */
-    private function getFormParams($title, $author) 
-    {
-        $formParams = [
-            'title' => $title,
-            'author' => $author
-        ];
-        return $formParams;
-    }
-
-    /**
-     * Вывод формы с ошибкой, а также передача значений введенных ранее полей
+     * Вывести форму с ошибкой, а также передать значения введенных ранее полей
      *
      * @param app\modules\admin\models\Book $model
      * @param string $err
@@ -174,20 +151,34 @@ class BookController extends Controller
      *
      * @return yii\web\Response
      */
-    private function saveModel($model) 
-    {
+    private function saveModelResult($model) {
         if ($model->save()) {
             return $this->redirect([
                 'view', 
                 'id' => $model->id
             ]);
+        } else {
+            // TODO: сделать вывод ошибки на странице
+            return json_encode($model->errors, JSON_UNESCAPED_UNICODE);
         }
+    }
 
-        return $this->redirect([
-            'view', 
-            'id' => $model->id,
-            'error' => 'Ошибка при сохранении результата'
-        ]);
+    /**
+     * Создать массив введенных ранее значений формы для повторного заполнения 
+     * формы при появлении ошибки.
+     *
+     * @param string $title
+     * @param string $author
+     *
+     * @return array
+     */
+    private function getFormParams($title, $author) 
+    {
+        $formParams = [
+            'title' => $title,
+            'author_name' => $author
+        ];
+        return $formParams;
     }
 
     /**

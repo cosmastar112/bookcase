@@ -16,6 +16,8 @@ use Yii;
  */
 class Book extends \yii\db\ActiveRecord
 {
+    // поле формы для ввода имени автора; не будет сохранено в БД
+    public $author_name;
     /**
      * {@inheritdoc}
      */
@@ -30,7 +32,7 @@ class Book extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'author_id'], 'required'],
+            [['title', 'author_id', 'author_name'], 'required'],
             [['author_id'], 'integer'],
             [['title'], 'string', 'max' => 120],
             [['author_id'], 'exist', 'skipOnError' => true, 'targetClass' => Author::className(), 'targetAttribute' => ['author_id' => 'id']],

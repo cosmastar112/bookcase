@@ -20,22 +20,17 @@ use yii\widgets\ActiveForm;
         <?php 
             $title = $error['form']['title'];
             var_dump($error);
-            $author = $error['form']['author'];
-            var_dump($author);
+            $author_name = $error['form']['author_name'];
+            var_dump($author_name);
         ?>
     <?php endif; ?>
 
-    <?php $form = ActiveForm::begin(); ?>
-    <!-- поле ввода имени автора -->
+    <?php $form = ActiveForm::begin([ 'id' => 'book-form__afw']); ?>
+    <!-- Поле ввода названия книги -->
     <?= $form->field($model, 'title')->textInput(['maxlength' => true, 'value' => $title]) ?>
-    <?= Html::label('Author', 'book-form__author-input', [ 'class' => "" ]) ?>
 
-    <?= Html::textInput('author', $author, [ 
-            'class' => "form-control", 
-            'id' => "book-form__author-input",
-    ]) ?>
-
-    <?= Html::tag('p') ?>
+    <!-- Поле ввода имени автора -->
+    <?= $form->field($model, 'author_name')->textInput(['maxlength' => true, 'value' => $author_name]) ?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>
