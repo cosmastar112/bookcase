@@ -61,6 +61,14 @@ class BookController extends Controller
     /**
      * Создать модель книги (Book).
      * Если создание прошло успешно, происходит перенаправление на страницу 'view'.
+     * Иначе рендерится форма ввода с ошибкой, при этом введенные ранее поля формы 
+     * заполняются.
+     *
+     * Описание алгоритма:
+     * Сначала проверяется поле "Название книги": ошибка возникает если книга уже 
+     * существует. В случае успеха проверяется имя автора книги: если автор не 
+     * существует, выводится ошибка. Попытка сохранения модели предпринимается при 
+     * соблюдении условий: книга НЕ СУЩЕСТВУЕТ и автор СУЩЕСТВУЕТ
      *
      * Параметр author в POST-массиве используется для поиска значения, которое 
      * будет загружено в модель и в дальнейшем сохранено.
@@ -73,6 +81,24 @@ class BookController extends Controller
 
         $params = Yii::$app->request->post();
         // var_dump($params);
+
+        // Проверяю значение поля формы, в котором хранится название книги
+        $title = $params['Book']['title'];
+        $isBookExist = Book::find()
+            ->where(['title' => $title])
+            ->one();
+
+        // Если книга уже есть в таблице, возвращаю ошибку
+        if ($isBookExist !== null) {
+            $err = "Книга '{$title}' уже существует в таблице";
+            // значения введенных полей для заполнения полей формы после ошибки
+            if ( isset($params['author']) ) {
+                $formParams = $this->getFormParams($title, $params['author']);
+            }
+            // вывод формы с ошибкой; также передаю значения введенных ранее полей
+            return $this->renderError($model, $err, $formParams);
+        }
+        // var_dump($isBookExist);
 
         // Проверяю значение поля формы, в котором хранится имя автора
         if (isset($params['author']) && $params['author'] !== '') {
@@ -90,14 +116,11 @@ class BookController extends Controller
                 return $this->saveModel($model);
             } else {
                 // В случае если автор не был найден вернуть ошибку
-                return $this->render('create', [
-                    'model' => $model,
-                    'error' => [
-                        'descr' => 'Не найдено автора по имени',
-                        'author' => $params['author'],
-                        'form' => $params['Book'],
-                    ]
-                ]);
+                $err = "Не найдено автора по имени '{$params['author']}'";
+                // значения введенных ранее полей
+                $formParams = $this->getFormParams($title, $params['author']);
+                // вывод формы с ошибкой;также передаю значений введенных ранее полей
+                return $this->renderError($model, $err, $formParams);
             }
         }
 
@@ -107,8 +130,48 @@ class BookController extends Controller
     }
 
     /**
-     * Произвести операцию сохранения модели и вернуть ответ
+     * Создать массив введенных ранее значений формы для повторного заполнения 
+     * формы при появлении ошибки.
+     *
+     * @param string $title
+     * @param string $author
+     *
+     * @return array
+     */
+    private function getFormParams($title, $author) 
+    {
+        $formParams = [
+            'title' => $title,
+            'author' => $author
+        ];
+        return $formParams;
+    }
+
+    /**
+     * Вывод формы с ошибкой, а также передача значений введенных ранее полей
+     *
      * @param app\modules\admin\models\Book $model
+     * @param string $err
+     * @param array $formParams
+     *
+     * @return string The rendering resul
+     */
+    private function renderError($model, $err, $formParams) 
+    {
+        return $this->render('create', [
+            'model' => $model,
+            'error' => [
+                'descr' => $err,
+                'form' => $formParams,
+            ]
+        ]);
+    }
+
+    /**
+     * Произвести операцию сохранения модели и вернуть ответ
+     *
+     * @param app\modules\admin\models\Book $model
+     *
      * @return yii\web\Response
      */
     private function saveModel($model) 
@@ -129,9 +192,12 @@ class BookController extends Controller
 
     /**
      * Получить ID автора по его имени (точное совпадение)
+     *
      * @param string $author имя автора
-     * @return integer|null
+     *
      * @example getAuthorId("Александр Дюма"); // => 2
+     *
+     * @return integer|null
      */
     private function getAuthorId($author) 
     {
