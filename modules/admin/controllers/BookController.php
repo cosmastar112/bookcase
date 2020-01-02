@@ -4,6 +4,7 @@ namespace app\modules\admin\controllers;
 
 use Yii;
 use app\modules\admin\models\Book;
+use app\modules\admin\models\Author;
 use app\modules\admin\models\BookSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -58,21 +59,91 @@ class BookController extends Controller
     }
 
     /**
-     * Creates a new Book model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * Создать модель книги (Book).
+     * Если создание прошло успешно, происходит перенаправление на страницу 'view'.
+     *
+     * Параметр author в POST-массиве используется для поиска значения, которое 
+     * будет загружено в модель и в дальнейшем сохранено.
+     *
      * @return mixed
      */
     public function actionCreate()
     {
         $model = new Book();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        $params = Yii::$app->request->post();
+        // var_dump($params);
+
+        // Проверяю значение поля формы, в котором хранится имя автора
+        if (isset($params['author']) && $params['author'] !== '') {
+            // Получаю код автора (если есть)
+            $authorId = $this->getAuthorId($params['author']);
+
+            if ($authorId !== null) {
+                // Подстановка результата
+                $params['Book']['author_id'] = $authorId;
+                // var_dump($params['Book']);
+
+                // Загружаю данные в модель
+                $model->attributes = $params['Book'];
+                // сохраняю модель и возвращаю ответ
+                return $this->saveModel($model);
+            } else {
+                // В случае если автор не был найден вернуть ошибку
+                return $this->render('create', [
+                    'model' => $model,
+                    'error' => [
+                        'descr' => 'Не найдено автора по имени',
+                        'author' => $params['author'],
+                        'form' => $params['Book'],
+                    ]
+                ]);
+            }
         }
 
         return $this->render('create', [
             'model' => $model,
         ]);
+    }
+
+    /**
+     * Произвести операцию сохранения модели и вернуть ответ
+     * @param app\modules\admin\models\Book $model
+     * @return yii\web\Response
+     */
+    private function saveModel($model) 
+    {
+        if ($model->save()) {
+            return $this->redirect([
+                'view', 
+                'id' => $model->id
+            ]);
+        }
+
+        return $this->redirect([
+            'view', 
+            'id' => $model->id,
+            'error' => 'Ошибка при сохранении результата'
+        ]);
+    }
+
+    /**
+     * Получить ID автора по его имени (точное совпадение)
+     * @param string $author имя автора
+     * @return integer|null
+     * @example getAuthorId("Александр Дюма"); // => 2
+     */
+    private function getAuthorId($author) 
+    {
+        $authorId = Author::find()
+            ->select('id')
+            ->where([ 'name' => $author ])
+            ->one();
+
+        if ($authorId !== null) {
+            return $authorId->id;
+        }
+        return null;
     }
 
     /**
