@@ -23,6 +23,13 @@ use yii\widgets\ActiveForm;
             $author_name = $error['form']['author_name'];
             var_dump($author_name);
         ?>
+    <?php else: ?>
+        <!-- На случай если переход произошел из представления update -->
+        <?php
+            if ( isset($update) ) {
+                $author_name = $update['author_name'];
+            }
+        ?>
     <?php endif; ?>
 
     <?php $form = ActiveForm::begin([ 'id' => 'book-form__afw']); ?>

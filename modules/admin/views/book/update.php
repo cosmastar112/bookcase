@@ -18,6 +18,10 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
 
     <?= $this->render('_form', [
         'model' => $model,
+        'error' => $error,
+        'update' => [
+            'author_name' => $author_name
+        ]
     ]) ?>
 
 </div>

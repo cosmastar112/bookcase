@@ -96,7 +96,7 @@ class BookController extends Controller
                 // передаю ранее введенные в форму значения для повторного заполнения
                 // полей формы после рендеринга ошибки
                 $formParams = $this->getFormParams($title, $params['author_name']);
-                return $this->renderError($model, $err, $formParams);
+                return $this->renderCreateError($model, $err, $formParams);
             }
 
             // Ищу автора по введенному имени
@@ -107,7 +107,7 @@ class BookController extends Controller
                 // передаю ранее введенные в форму значения для повторного заполнения
                 // полей формы после рендеринга ошибки
                 $formParams = $this->getFormParams($title, $params['author_name']);
-                return $this->renderError($model, $err, $formParams);
+                return $this->renderCreateError($model, $err, $formParams);
             }
 
             // Если автор найден
@@ -125,7 +125,8 @@ class BookController extends Controller
     }
 
     /**
-     * Вывести форму с ошибкой, а также передать значения введенных ранее полей
+     * Вывести представление 'create' с ошибкой, а также передать значения 
+     * введенных ранее полей 
      *
      * @param app\modules\admin\models\Book $model
      * @param string $err
@@ -133,9 +134,29 @@ class BookController extends Controller
      *
      * @return string The rendering resul
      */
-    private function renderError($model, $err, $formParams) 
+    private function renderCreateError($model, $err, $formParams) 
     {
         return $this->render('create', [
+            'model' => $model,
+            'error' => [
+                'descr' => $err,
+                'form' => $formParams,
+            ]
+        ]);
+    }
+
+    /**
+     * Вывести представление 'update' с ошибкой, а также передать значения 
+     * введенных ранее полей 
+     * @param app\modules\admin\models\Book $model
+     * @param string $err
+     * @param array $formParams
+     *
+     * @return string The rendering resul
+     */
+    private function renderUpdateError($model, $err, $formParams) 
+    {
+        return $this->render('update', [
             'model' => $model,
             'error' => [
                 'descr' => $err,
@@ -192,13 +213,35 @@ class BookController extends Controller
      */
     private function getAuthorId($author) 
     {
-        $authorId = Author::find()
+        $author = Author::find()
             ->select('id')
             ->where([ 'name' => $author ])
             ->one();
 
-        if ($authorId !== null) {
-            return $authorId->id;
+        if ($author !== null) {
+            return $author->id;
+        }
+        return null;
+    }
+
+    /**
+     * Получить имя автора по его ID (точное совпадение)
+     *
+     * @param string $author имя автора
+     *
+     * @example getAuthorName(2); // => "Александр Дюма"
+     *
+     * @return integer|null
+     */
+    private function getAuthorName($authorId) 
+    {
+        $author = Author::find()
+            ->select('name')
+            ->where([ 'id' => $authorId ])
+            ->one();
+
+        if ($author !== null) {
+            return $author->name;
         }
         return null;
     }
@@ -214,12 +257,55 @@ class BookController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        $params = Yii::$app->request->post('Book');
+
+        // Обновление модели
+        if (isset($params)) {
+
+            // Проверяю значение поля формы с названием книги
+            $title = $params['title'];
+            // Есть книга с таким названием в таблице в БД?
+            $existingBook = Book::find()
+                ->where(['title' => $title])
+                ->one();
+
+            // Если книга с таким названием уже есть в таблице, и при этом она не 
+            // равна самой себе (название было изменено), возвращаю ошибку.
+            // Если название книги осталось прежним, ошибка не будет возвращена.
+            if ($existingBook !== null && $model->title !== $existingBook->title) {
+                $err = "Книга '{$title}' уже существует в таблице";
+                // передаю ранее введенные в форму значения для повторного заполнения
+                // полей формы после рендеринга ошибки
+                $formParams = $this->getFormParams($title, $params['author_name']);
+                return $this->renderUpdateError($model, $err, $formParams);
+            }
+
+            // Ищу автора по введенному имени
+            $authorId = $this->getAuthorId($params['author_name']);
+            if ($authorId === null) {
+                // Возвращаю ошибку если автор не был найден 
+                $err = "Не найдено автора по имени '{$params['author_name']}'";
+                // передаю ранее введенные в форму значения для повторного заполнения
+                // полей формы после рендеринга ошибки
+                $formParams = $this->getFormParams($title, $params['author_name']);
+                return $this->renderUpdateError($model, $err, $formParams);
+            }
+
+            // Если автор найден
+            $params['author_id'] = $authorId;
+            // var_dump($params);
+            // загружаю значение (ID автора) в модель
+            $model->attributes = $params;
+            // и вовзаращаю результат сохранения модели
+            return $this->saveModelResult($model);
         }
+
+        // Подстановка имени автора в соответствующее поле формы (вместо ID)
+        $author_name = $this->getAuthorName($model->author_id);
 
         return $this->render('update', [
             'model' => $model,
+            'author_name' => $author_name
         ]);
     }
 
