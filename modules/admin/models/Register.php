@@ -32,6 +32,7 @@ class Register extends \yii\db\ActiveRecord
         return [
             [['book_id', 'date_start', 'date_end'], 'required'],
             [['book_id'], 'integer'],
+            [['date_start', 'date_end'], 'date', 'format' => 'php:Y-m-d'],
             [['date_start', 'date_end'], 'safe'],
             [['book_id'], 'exist', 'skipOnError' => true, 'targetClass' => Book::className(), 'targetAttribute' => ['book_id' => 'id']],
         ];
