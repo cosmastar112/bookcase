@@ -23,6 +23,8 @@
                 'value' => 'id'
             ],
             [
+                // книга
+                'label' => 'Название книги',
                 'attribute' => 'book_id',
                 'value' => 'book.title'
             ],

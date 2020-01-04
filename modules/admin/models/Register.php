@@ -47,10 +47,10 @@ class Register extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'book_id' => 'Book ID',
-            'date_start' => 'Date Start',
-            'date_end' => 'Date End',
+            'id' => 'ID записи',
+            'book_id' => 'ID книги',
+            'date_start' => 'Дата начала чтения',
+            'date_end' => 'Дата прочтения',
         ];
     }
 
