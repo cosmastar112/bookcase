@@ -20,7 +20,7 @@ use kartik\date\DatePicker;
         <?= Html::tag('p', $error['descr'], [ 'class' => 'register-form__error' ]); ?>
         <!-- и найти значения полей формы, которые были введены ранее -->
         <?php 
-            $book_id = $error['form']['book_id'];
+            $book_title = $error['form']['book_title'];
             var_dump($error);
             $date_start = $error['form']['date_start'];
             var_dump($date_start);
@@ -38,7 +38,7 @@ use kartik\date\DatePicker;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'book_id')->textInput(['value' => $book_id]) ?>
+    <?= $form->field($model, 'book_title')->textInput(['value' => $book_title]) ?>
 
     <?= $form->field($model, 'date_start')->widget(DatePicker::className(), [
         'options' => [ 'placeholder' => 'Дата начала чтения ...', 'value' => $date_start ],

@@ -4,6 +4,7 @@ namespace app\modules\admin\controllers;
 
 use Yii;
 use app\modules\admin\models\Register;
+use app\modules\admin\models\Book;
 use app\modules\admin\models\RegisterSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -70,7 +71,17 @@ class RegisterController extends Controller
         // var_dump($params);
         if ( isset($params) ) {
 
-            $bookId = $params['book_id'];
+            // Ищу книгу по введенному имени
+            $bookId = $this->getBookId($params['book_title']);
+            // var_dump($params['book_title']);
+
+            if ($bookId === null) {
+                // Возвращаю ошибку если книга не была найдена
+                $err = "Не найдено книги с названием '{$params['book_title']}'";
+                // введенные раннее значения полей формы
+                $formParams = $this->getFormParams($params['book_title'], $params['date_start'], $params['date_end']);
+                return $this->renderCreateError($model, $err, $formParams);
+            }
 
             // привожу даты к формату, который можно сохранить в БД 
             $date_start = $this->formatDateToDBFormat($params['date_start']);
@@ -82,7 +93,7 @@ class RegisterController extends Controller
             if ($date_start > $date_end) {
                 $err = 'Дата прочтения должна быть меньше даты начала чтения';
                 // введенные раннее значения полей формы
-                $formParams = $this->getFormParams($bookId, $params['date_start'], $params['date_end']);
+                $formParams = $this->getFormParams($params['book_title'], $params['date_start'], $params['date_end']);
                 return $this->renderCreateError($model, $err, $formParams);
             }
 
@@ -90,11 +101,12 @@ class RegisterController extends Controller
             $updatedParams = [
                 'book_id' => $bookId,
                 'date_start' => $date_start,
-                'date_end' => $date_end
+                'date_end' => $date_end,
+                'book_title' => 'mock'
             ];
             $model->attributes = $updatedParams;
             // и вернуть результат сохранения модели
-            $this->saveModelResult($model);
+            return $this->saveModelResult($model);
         }
 
         return $this->render('create', [
@@ -169,11 +181,29 @@ class RegisterController extends Controller
     private function getFormParams($title, $date_start, $date_end) 
     {
         $formParams = [
-            'book_id' => $title,
+            'book_title' => $title,
             'date_start' => $date_start,
             'date_end' => $date_end
         ];
         return $formParams;
+    }
+
+    /**
+     * Получить ID книги по её названию (точное совпадение)
+     *
+     * @param string $book название книги
+     *
+     * @return integer|null
+     */
+    private function getBookId($book) {
+        $book = Book::find()
+            ->select('id')
+            ->where(['title' => $book])
+            ->one();
+        if ($book !== null) {
+            return $book->id;
+        }
+        return null;
     }
 
     /**

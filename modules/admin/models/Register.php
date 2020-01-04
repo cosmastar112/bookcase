@@ -16,6 +16,9 @@ use Yii;
  */
 class Register extends \yii\db\ActiveRecord
 {
+    // поле формы для ввода названия книги; не будет сохранено в БД
+    public $book_title;
+
     /**
      * {@inheritdoc}
      */
@@ -30,7 +33,7 @@ class Register extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['book_id', 'date_start', 'date_end'], 'required'],
+            [['book_id', 'book_title', 'date_start', 'date_end'], 'required'],
             [['book_id'], 'integer'],
             [['date_start', 'date_end'], 'date', 'format' => 'php:Y-m-d'],
             [['date_start', 'date_end'], 'safe'],
