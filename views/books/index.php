@@ -27,7 +27,8 @@
                 'value' => 'title'
             ],
             [
-            	// автор
+                // автор
+                'label' => 'Автор',
                 'attribute' => 'author_id',
                 'value' => 'author.name'
             ],
