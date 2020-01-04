@@ -30,9 +30,11 @@ use kartik\date\DatePicker;
     <?php else: ?>
         <!-- На случай если переход произошел из представления update -->
         <?php
-            // if ( isset($update) ) {
-            //     $author_name = $update['author_name'];
-            // }
+            if ( isset($update) ) {
+                $book_title = $update['book_title'];
+                $date_start = $update['date_start'];
+                $date_end = $update['date_end'];
+            }
         ?>
     <?php endif; ?>
 

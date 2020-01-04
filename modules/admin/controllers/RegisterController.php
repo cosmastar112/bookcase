@@ -71,28 +71,28 @@ class RegisterController extends Controller
         // var_dump($params);
         if ( isset($params) ) {
 
-            // Ищу книгу по введенному имени
+            // Искать книгу по введенному имени
             $bookId = $this->getBookId($params['book_title']);
             // var_dump($params['book_title']);
 
             if ($bookId === null) {
-                // Возвращаю ошибку если книга не была найдена
+                // Вернуть ошибку если книга не была найдена
                 $err = "Не найдено книги с названием '{$params['book_title']}'";
-                // введенные раннее значения полей формы
+                // найти введенные раннее значения полей формы
                 $formParams = $this->getFormParams($params['book_title'], $params['date_start'], $params['date_end']);
                 return $this->renderCreateError($model, $err, $formParams);
             }
 
-            // привожу даты к формату, который можно сохранить в БД 
+            // привести даты к формату, который можно сохранить в БД 
             $date_start = $this->formatDateToDBFormat($params['date_start']);
             $date_end = $this->formatDateToDBFormat($params['date_end']);
             // var_dump($date_start);
             // var_dump($date_end);
             // var_dump($date_start > $date_end);
-            // Выводить ошибку в случае если дата прочтения меньше даты начала чтения
+            // Вывести ошибку в случае если дата прочтения меньше даты начала чтения
             if ($date_start > $date_end) {
                 $err = 'Дата прочтения должна быть меньше даты начала чтения';
-                // введенные раннее значения полей формы
+                // найти введенные раннее значения полей формы
                 $formParams = $this->getFormParams($params['book_title'], $params['date_start'], $params['date_end']);
                 return $this->renderCreateError($model, $err, $formParams);
             }
@@ -139,7 +139,7 @@ class RegisterController extends Controller
      *
      * @param string $date
      *
-     * @return yii\web\Response
+     * @return string
      */
     private function formatDateToDBFormat($date)
     {
@@ -149,17 +149,55 @@ class RegisterController extends Controller
     }
 
     /**
+     * Привести формат даты к формату, который может быть отображен в форме
+     * date => 'DD-MM-YYYY'
+     *
+     * @param string $date
+     *
+     * @return string
+     */
+    private function formatDateToViewFormat($date)
+    {
+        // var_dump($date);
+        $dateObject = date_create($date);
+        $dateInDBFormat = date_format($dateObject, 'd-m-Y');
+        return $dateInDBFormat;
+    }
+
+    /**
      * Вывести представление 'create' с ошибкой, а также передать значения 
      * введенных ранее полей 
+     *
      * @param app\modules\admin\models\Register $model
      * @param string $err
      * @param array $formParams
      *
-     * @return string The rendering resul
+     * @return string The rendering result
      */
     private function renderCreateError($model, $err, $formParams)
     {
         return $this->render('create', [
+            'model' => $model,
+            'error' => [
+                'descr' => $err,
+                'form' => $formParams
+            ]
+        ]);
+    }
+
+    /**
+     * Вывести представление 'update' с ошибкой, а также передать значения 
+     * введенных ранее полей 
+     *
+     * @param app\modules\admin\models\Register $model
+     * @param string $err
+     * @param array $formParams
+     *
+     * @return string The rendering result
+     */
+    private function renderUpdateError($model, $err, $formParams)
+    {
+        return $this->render('update', [
             'model' => $model,
             'error' => [
                 'descr' => $err,
@@ -207,6 +245,24 @@ class RegisterController extends Controller
     }
 
     /**
+     * Получить название книги по её ID (точное совпадение)
+     *
+     * @param string $book ID книги
+     *
+     * @return integer|null
+     */
+    private function getBookTitle($book) {
+        $book = Book::find()
+            ->select('title')
+            ->where(['id' => $book])
+            ->one();
+        if ($book !== null) {
+            return $book->title;
+        }
+        return null;
+    }
+
+    /**
      * Updates an existing Register model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
@@ -217,12 +273,76 @@ class RegisterController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        $params = Yii::$app->request->post('Register');
+
+        if ( isset($params) ) {
+      
+            // Проверить название книги
+            $book_title = $params['book_title'];
+            // Есть книга с таким названием в таблице в БД?
+            $existingBook = Book::find()
+                ->where(['title' => $book_title])
+                ->one();
+
+            // Запомнить ID книги
+            $bookId = $existingBook->id;
+
+            // Если книга с таким названием уже есть в таблице, и при этом она не 
+            // равна самой себе (название было изменено), вернуть ошибку.
+            if ($existingBook !== null && $model->book_id !== $existingBook->id) {
+                $err = "Книга '{$book_title}' уже существует в таблице";
+                // передать ранее введенные в форму значения для повторного заполнения
+                // после рендеринга ошибки
+                $formParams = $this->getFormParams($params['book_title'], $params['date_start'], $params['date_end']);
+                return $this->renderUpdateError($model, $err, $formParams);
+            }
+
+            // В случае если книги с таким названием нет в таблице
+            if ($bookId === null) {
+                // вернуть ошибку
+                $err = "Не найдено книги с названием '{$params['book_title']}'";
+                // найти введенные раннее значения полей формы
+                $formParams = $this->getFormParams($params['book_title'], $params['date_start'], $params['date_end']);
+                return $this->renderUpdateError($model, $err, $formParams);
+            }
+
+            // Если название книги осталось прежним, не возвращать ошибку.
+            // Привести даты к формату, который можно сохранить в БД 
+            $date_start = $this->formatDateToDBFormat($params['date_start']);
+            $date_end = $this->formatDateToDBFormat($params['date_end']);
+            // Вывести ошибку в случае если дата прочтения меньше даты начала чтения
+            if ($date_start > $date_end) {
+                $err = 'Дата прочтения должна быть меньше даты начала чтения';
+                // найти введенные раннее значения полей формы
+                $formParams = $this->getFormParams($params['book_title'], $params['date_start'], $params['date_end']);
+                return $this->renderUpdateError($model, $err, $formParams);
+            }
+
+            // Загрузить данные в модель
+            $updatedParams = [
+                'book_id' => $bookId,
+                'date_start' => $date_start,
+                'date_end' => $date_end,
+                'book_title' => 'mock'
+            ];
+            $model->attributes = $updatedParams;
+            // и вернуть результат сохранения модели
+            return $this->saveModelResult($model);
         }
+
+        // Подставить название книги в соответствующее поле формы (вместо ID)
+        $book_title = $this->getBookTitle($model->book_id);
+        // привести даты к формату, который можно подставить в поля формы
+        $date_start = $this->formatDateToViewFormat($model->date_start);
+        $date_end = $this->formatDateToViewFormat($model->date_end);
 
         return $this->render('update', [
             'model' => $model,
+            'params' => [
+                'book_title' => $book_title,
+                'date_start' => $date_start,
+                'date_end' => $date_end
+            ]
         ]);
     }
 
