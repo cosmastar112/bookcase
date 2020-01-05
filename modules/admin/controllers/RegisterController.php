@@ -10,6 +10,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+use app\modules\admin\components\Log\Log;
+
 /**
  * RegisterController implements the CRUD actions for Register model.
  */
@@ -106,7 +108,7 @@ class RegisterController extends Controller
             ];
             $model->attributes = $updatedParams;
             // и вернуть результат сохранения модели
-            return $this->saveModelResult($model);
+            return $this->saveModelResult($model, null /* для логирования */ );
         }
 
         return $this->render('create', [
@@ -121,8 +123,15 @@ class RegisterController extends Controller
      *
      * @return yii\web\Response
      */
-    private function saveModelResult($model) {
+    private function saveModelResult($model, $oldValues) 
+    {
         if ($model->save()) {
+
+            // логируемое действие: изменение или создание записи
+            $logAction = $oldValues ? 2 : 1;
+            // логирование сохранения модели книги
+            Log::log('Register', $logAction, $model->id, $oldValues, $model->toArray());
+
             return $this->redirect([
                 'view', 
                 'id' => $model->id
@@ -325,9 +334,11 @@ class RegisterController extends Controller
                 'date_end' => $date_end,
                 'book_title' => 'mock'
             ];
+            // старые значения модели для логирования
+            $old_values = $model->toArray();
             $model->attributes = $updatedParams;
             // и вернуть результат сохранения модели
-            return $this->saveModelResult($model);
+            return $this->saveModelResult($model, $old_values);
         }
 
         // Подставить название книги в соответствующее поле формы (вместо ID)
@@ -356,6 +367,9 @@ class RegisterController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
+
+        // логирование удаления записи о книге
+        Log::log('Register', 3, $id, null, null);
 
         return $this->redirect(['index']);
     }
