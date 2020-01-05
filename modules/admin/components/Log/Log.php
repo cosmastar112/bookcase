@@ -134,7 +134,7 @@ class Log
 
             $model->field_name = $key;
             $model->old_value = null;
-            $model->new_value = $value;
+            $model->new_value = (string) $value;
     
             if ($model->validate() && $model->save()) {
             } else {
