@@ -70,7 +70,7 @@ class AuthorController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
             // логирование создания записи об авторе
-            Log::log('Author', 1, $model->id, null, Yii::$app->request->post('Author'));
+            Log::log('Author', 1, $model->id, null, $model->toArray());
 
             return $this->redirect(['view', 'id' => $model->id]);
         }
