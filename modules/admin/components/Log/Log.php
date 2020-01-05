@@ -25,12 +25,15 @@ class Log
      */
     public static function log($section, $action, $modelId, $oldValues, $newValues)
     {
-        // return 
+    	// var_dump($oldValues);
+    	// var_dump($newValues);
+        // return;
+
         $logActionResult = self::logAction($section, $action, $modelId);
         if ( is_int($logActionResult) ) {
             $logValuesResult = self::logValues($logActionResult, $oldValues, $newValues);
-            var_dump($logActionResult);
-            var_dump($logValuesResult);
+            // var_dump($logActionResult);
+            // var_dump($logValuesResult);
         } else {
             // Ошибка валидации или сохранения; TODO: throw exception
             var_dump($logActionResult);
@@ -95,24 +98,40 @@ class Log
      */
     private static function logValues($id_log_action, $oldValues, $newValues)
     {
-        $model = new LogValues();    
-        $model->id_log_action = $id_log_action;
+    	// var_dump($oldValues);
+    	// var_dump($newValues);
+    	// return;
 
         $isCreate = !isset($oldValues) && isset($newValues);
         $isDelete = !isset($oldValues) && !isset($newValues);
+        $isUpdate = isset($oldValues) && isset($newValues);
         $saveModelResult = null;
         if ($isCreate) {
-            $saveModelResult = self::saveModelCreate($model, $newValues, $oldValues);
+            $saveModelResult = self::saveModelCreate($id_log_action, $oldValues, $newValues);
         } else if ($isDelete) {
-            $deleteModelResult = self::saveModelDelete($model, $newValues, $oldValues);
+            $deleteModelResult = self::saveModelDelete();
+        } else if ($isUpdate) {
+            $updateModelResult = self::saveModelUpdate($id_log_action, $oldValues, $newValues);
         }
-        return $saveModelResult;    
+        return $saveModelResult;
     }
 
-    private static function saveModelCreate($model, $newValues, $oldValues)
+    /**
+     * Логирование значений при сохранении модели
+     *
+     * @param integer $id_log_action ID связанного логируемого действия
+     * @param null    $oldValues     массив старых значений
+     * @param array   $newValues     массив новых значений
+     *
+     * @return true|array true если модель была сохранена или массив ошибок
+     */
+    private static function saveModelCreate($id_log_action, $oldValues, $newValues)
     {
         // Логирование значений
         foreach ($newValues as $key => $value) {
+            $model = new LogValues();    
+            $model->id_log_action = $id_log_action;
+
             $model->field_name = $key;
             $model->old_value = null;
             $model->new_value = $value;
@@ -126,13 +145,44 @@ class Log
         return true;
     }
 
-    private static function saveModelDelete($model, $newValues, $oldValues)
+    /**
+     * Логирование значений при удалении модели
+     *
+     * @return true
+     */
+    private static function saveModelDelete()
     {
         return true;
     }
 
-
-    // $model->new_value = isset($newValues) ? $value : null
+    /**
+     * Логирование значений при изменении модели
+     *
+     * @param integer $id_log_action ID связанного логируемого действия
+     * @param null    $oldValues     массив старых значений
+     * @param array   $newValues     массив новых значений
+     *
+     * @return true|array true если модель была сохранена или массив ошибок
+     */
+    private static function saveModelUpdate($id_log_action, $oldValues, $newValues)
+    {
+        // Логирование значений
+        foreach ($newValues as $key => $value) {
+            // var_dump('values', $key, $value);
+            $model = new LogValues();    
+            $model->id_log_action = $id_log_action;
+            $model->field_name = $key;
+            $model->old_value = (string) $oldValues[$key];
+            $model->new_value = (string) $value;
+    
+            if ($model->validate() && $model->save()) {
+            } else {
+                var_dump($model->getErrorSummary(true));
+                return $model->getErrorSummary(true);
+            }
+        }
+        return true;
+    }
 }
 
 ?>

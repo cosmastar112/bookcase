@@ -91,7 +91,12 @@ class AuthorController extends Controller
     {
         $model = $this->findModel($id);
 
+        // значения модели до обновления для логирования
+        $oldValues = $model->toArray();
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            // логирование изменения записи об авторе
+            Log::log('Author', 2, $id, $oldValues, $model->toArray());
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
