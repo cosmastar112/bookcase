@@ -68,8 +68,11 @@ class AuthorController extends Controller
         $model = new Author();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            $logResult = Log::log('Author', 1, $model->id, Yii::$app->request->post('Author'));
-            var_dump($logResult);
+
+            // $logResult = Log::log('Author', 1, $model->id, Yii::$app->request->post('Author'));
+            // var_dump($logResult);
+            Log::log('Author', 1, $model->id, null, Yii::$app->request->post('Author'));
+
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
