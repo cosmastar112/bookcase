@@ -10,6 +10,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+use app\modules\admin\components\Log\Log;
+
 /**
  * BookController implements the CRUD actions for Book model.
  */
@@ -76,7 +78,8 @@ class BookController extends Controller
      *
      * @return mixed
      */
-    public function actionCreate() {
+    public function actionCreate() 
+    {
         $model = new Book();
 
         $params = Yii::$app->request->post('Book');
@@ -115,8 +118,8 @@ class BookController extends Controller
             // var_dump($params);
             // загружаю значение (ID автора) в модель
             $model->attributes = $params;
-            // и вовзаращаю результат сохранения модели
-            return $this->saveModelResult($model);
+            // и возвращаю результат сохранения модели
+            return $this->saveModelResult($model, null /* для логирования */);
         }
 
         return $this->render('create', [
@@ -169,11 +172,19 @@ class BookController extends Controller
      * Произвести операцию сохранения модели и вернуть ответ
      *
      * @param app\modules\admin\models\Book $model
+     * @param null|array старые значения модели для логирования 
      *
      * @return yii\web\Response
      */
-    private function saveModelResult($model) {
+    private function saveModelResult($model, $oldValues) 
+    {
         if ($model->save()) {
+
+            // логируемое действие: изменение или создание записи
+            $logAction = $oldValues ? 2 : 1;
+            // логирование сохранения модели книги
+            Log::log('Book', $logAction, $model->id, $oldValues, $model->toArray());
+
             return $this->redirect([
                 'view', 
                 'id' => $model->id
@@ -294,10 +305,12 @@ class BookController extends Controller
             // Если автор найден
             $params['author_id'] = $authorId;
             // var_dump($params);
+            // старые значения модели для логирования
+            $oldValues = $model->toArray();
             // загружаю значение (ID автора) в модель
             $model->attributes = $params;
-            // и вовзаращаю результат сохранения модели
-            return $this->saveModelResult($model);
+            // и возвращаю результат сохранения модели
+            return $this->saveModelResult($model, $oldValues);
         }
 
         // Подстановка имени автора в соответствующее поле формы (вместо ID)
@@ -319,6 +332,9 @@ class BookController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
+
+        // логирование удаления записи о книге
+        Log::log('Book', 3, $id, null, null);
 
         return $this->redirect(['index']);
     }
