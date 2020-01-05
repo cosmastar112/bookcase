@@ -15,9 +15,14 @@
         'href' => Url::toRoute('register/index')
     ]);
 
+    $log = Html::tag('a', 'Лог', [ 
+        'href' => Url::toRoute('log/index')
+    ]);
+
     echoLink($authors);
     echoLink($books);
     echoLink($register);
+    echoLink($log);
 
     /**
      * Выводит строку, оборачивая вывод в тэг <p>
