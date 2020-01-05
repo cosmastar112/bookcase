@@ -8,6 +8,7 @@ use app\modules\admin\models\AuthorSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\modules\admin\components\Log\Log;
 
 /**
  * AuthorController implements the CRUD actions for Author model.
@@ -67,6 +68,8 @@ class AuthorController extends Controller
         $model = new Author();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $logResult = Log::log('Author', 1, $model->id, Yii::$app->request->post('Author'));
+            var_dump($logResult);
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
