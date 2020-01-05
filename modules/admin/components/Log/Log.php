@@ -48,6 +48,7 @@ class Log
      * user = 0 (default)
      *
      * @example: logAction('Author', 1, 1) /=> создание записи
+     * @example: logAction('Author', 3, 1) /=> удаление записи
      * @return   integer|array ID сохраненной модели или массив ошибок
      */
     private static function logAction($section, $action, $modelId)
@@ -94,31 +95,44 @@ class Log
      */
     private static function logValues($id_log_action, $oldValues, $newValues)
     {
-        $model = new LogValues();
-    
+        $model = new LogValues();    
         $model->id_log_action = $id_log_action;
 
+        $isCreate = !isset($oldValues) && isset($newValues);
+        $isDelete = !isset($oldValues) && !isset($newValues);
+        $saveModelResult = null;
+        if ($isCreate) {
+            $saveModelResult = self::saveModelCreate($model, $newValues, $oldValues);
+        } else if ($isDelete) {
+            $deleteModelResult = self::saveModelDelete($model, $newValues, $oldValues);
+        }
+        return $saveModelResult;    
+    }
+
+    private static function saveModelCreate($model, $newValues, $oldValues)
+    {
         // Логирование значений
         foreach ($newValues as $key => $value) {
             $model->field_name = $key;
-
-            if ( !isset($oldValues) ) {
-                $model->old_value = null;
-            }
-
+            $model->old_value = null;
             $model->new_value = $value;
-            // var_dump($values);
-            // return;
     
             if ($model->validate() && $model->save()) {
-                return true;
             } else {
                 var_dump($model->getErrorSummary(true));
                 return $model->getErrorSummary(true);
             }
         }
-    
+        return true;
     }
+
+    private static function saveModelDelete($model, $newValues, $oldValues)
+    {
+        return true;
+    }
+
+
+    // $model->new_value = isset($newValues) ? $value : null
 }
 
 ?>

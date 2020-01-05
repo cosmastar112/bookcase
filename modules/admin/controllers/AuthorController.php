@@ -69,8 +69,7 @@ class AuthorController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
-            // $logResult = Log::log('Author', 1, $model->id, Yii::$app->request->post('Author'));
-            // var_dump($logResult);
+            // логирование создания записи об авторе
             Log::log('Author', 1, $model->id, null, Yii::$app->request->post('Author'));
 
             return $this->redirect(['view', 'id' => $model->id]);
@@ -111,6 +110,9 @@ class AuthorController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
+
+        // логирование удаления записи об авторе
+        Log::log('Author', 3, $id, null, null);
 
         return $this->redirect(['index']);
     }

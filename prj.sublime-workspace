@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"Act",
+				"ActiveDataProvider\tabc"
+			],
+			[
+				"log",
+				"logActionResult\tabc"
+			],
+			[
+				"lo",
+				"logRsult\tabc"
+			],
+			[
 				"book",
 				"bookId\tabc"
 			],
@@ -136,47 +148,73 @@
 	"buffers":
 	[
 		{
-			"file": "views/site/index.php",
+			"file": "modules/admin/controllers/AuthorController.php",
 			"settings":
 			{
-				"buffer_size": 1298,
+				"buffer_size": 3564,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "views/authors/index.php",
+			"file": "modules/admin/components/Log/Log.php",
 			"settings":
 			{
-				"buffer_size": 585,
+				"buffer_size": 3750,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "modules/admin/models/Author.php",
+			"file": "modules/admin/controllers/LogController.php",
 			"settings":
 			{
-				"buffer_size": 885,
+				"buffer_size": 1046,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "modules/admin/views/log/index.php",
+			"settings":
+			{
+				"buffer_size": 1316,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "modules/admin/views/log/view.php",
+			"settings":
+			{
+				"buffer_size": 927,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vendor/yiisoft/yii2/helpers/BaseUrl.php",
+			"settings":
+			{
+				"buffer_size": 17402,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "modules/admin/components/Log/models/LogActions.php",
+			"settings":
+			{
+				"buffer_size": 1117,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "views/books/index.php",
+			"file": "modules/admin/components/Log/models/LogValues.php",
 			"settings":
 			{
-				"buffer_size": 734,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "\n                // книга\n                'label' => 'Название книги',",
-			"settings":
-			{
-				"buffer_size": 70,
-				"line_ending": "Windows"
+				"buffer_size": 1102,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -266,11 +304,18 @@
 		"/D/webserver/OSPanel/domains/bookcase/models",
 		"/D/webserver/OSPanel/domains/bookcase/modules",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin",
+		"/D/webserver/OSPanel/domains/bookcase/modules/admin/components",
+		"/D/webserver/OSPanel/domains/bookcase/modules/admin/components/Log",
+		"/D/webserver/OSPanel/domains/bookcase/modules/admin/components/Log/models",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/controllers",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/views",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/views/default",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/views/layouts",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/views/register",
+		"/D/webserver/OSPanel/domains/bookcase/vendor",
+		"/D/webserver/OSPanel/domains/bookcase/vendor/yiisoft",
+		"/D/webserver/OSPanel/domains/bookcase/vendor/yiisoft/yii2",
+		"/D/webserver/OSPanel/domains/bookcase/vendor/yiisoft/yii2/helpers",
 		"/D/webserver/OSPanel/domains/bookcase/views",
 		"/D/webserver/OSPanel/domains/bookcase/views/books",
 		"/D/webserver/OSPanel/domains/bookcase/views/layouts",
@@ -278,21 +323,28 @@
 	],
 	"file_history":
 	[
+		"/D/webserver/OSPanel/domains/bookcase/vendor/yiisoft/yii2/helpers/Url.php",
+		"/D/webserver/OSPanel/domains/bookcase/vendor/yiisoft/yii2/helpers/BaseHtml.php",
+		"/D/webserver/OSPanel/domains/bookcase/vendor/yiisoft/yii2/helpers/Html.php",
+		"/D/webserver/OSPanel/domains/bookcase/vendor/yiisoft/yii2/grid/GridView.php",
+		"/D/webserver/OSPanel/domains/bookcase/modules/admin/views/default/index.php",
+		"/D/webserver/OSPanel/domains/bookcase/views/books/index.php",
+		"/D/webserver/OSPanel/domains/bookcase/modules/admin/controllers/RegisterController.php",
+		"/D/webserver/OSPanel/domains/bookcase/modules/admin/components/Log/models/LogActions.php",
+		"/D/webserver/OSPanel/domains/bookcase/modules/admin/models/Author.php",
+		"/D/webserver/OSPanel/domains/bookcase/views/authors/index.php",
+		"/D/webserver/OSPanel/domains/bookcase/views/site/index.php",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/models/Book.php",
 		"/D/webserver/OSPanel/domains/bookcase/views/register/index.php",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/models/Register.php",
 		"/D/webserver/OSPanel/domains/bookcase/controllers/RegisterController.php",
-		"/D/webserver/OSPanel/domains/bookcase/modules/admin/controllers/RegisterController.php",
 		"/D/webserver/OSPanel/domains/bookcase/controllers/AuthorsController.php",
-		"/D/webserver/OSPanel/domains/bookcase/views/books/index.php",
 		"/D/webserver/OSPanel/domains/bookcase/controllers/BooksController.php",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/controllers/BookController.php",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/views/layouts/main.php",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/Module.php",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/views/register/_form.php",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/views/register/update.php",
-		"/D/webserver/OSPanel/domains/bookcase/modules/admin/views/default/index.php",
-		"/D/webserver/OSPanel/domains/bookcase/views/site/index.php",
 		"/D/webserver/OSPanel/domains/bookcase/config/web.php",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/views/book/update.php",
 		"/C/Users/Илья/Desktop/tmp.txt",
@@ -310,7 +362,6 @@
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/views/book/view.php",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/views/book/index.php",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/controllers/AuthorController.php",
-		"/D/webserver/OSPanel/domains/bookcase/modules/admin/models/Author.php",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/views/author/create.php",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/views/author/view.php",
 		"/D/webserver/OSPanel/domains/bookcase/modules/admin/views/author/_form.php",
@@ -399,17 +450,11 @@
 		"/D/Apache24/htdocs/basic/web/.htaccess",
 		"/D/webserver/OSPanel/domains/printers/basic/composer.json",
 		"/D/Apache24/htdocs/debugger-test/index.php",
-		"/D/TEMP/18e190413af045db88dfbd29609eb877.db.ses",
-		"/D/TEMP/Temp1_php-7.2.25-Win32-VC15-x64.zip/install.txt",
-		"/C/php/php.ini-development",
-		"/D/Apache24/.gitignore",
-		"/D/Apache24/conf/mime.types",
-		"/D/myserver/Apache24/conf/httpd.conf",
-		"/D/myserver/Apache24/htdocs/test/index.html"
+		"/D/TEMP/18e190413af045db88dfbd29609eb877.db.ses"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -423,6 +468,31 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"old_value",
+			"user",
+			"renderTableRow",
+			"Closure",
+			"',",
+			"\n",
+			"action",
+			"section",
+			"date",
+			",\n            [\n                'attribute' => 'date',\n                'value' => 'date'\n            ]",
+			"user",
+			"title",
+			"logAction(",
+			"action = [1|2|3]",
+			"logAction",
+			"logValues(",
+			"logValues",
+			"logAction",
+			"logRsult",
+			"formatDateTimeToDBFormat",
+			"formatDateToDBFormat",
+			"formatDateTimeToDBFormat",
+			"formatDateToDBFormat",
+			"Log",
+			";\n",
 			"id",
 			"title",
 			"booksProvider",
@@ -525,32 +595,7 @@
 			"43",
 			"42",
 			"41",
-			"40",
-			"50",
-			"49",
-			"48",
-			"47",
-			"46",
-			"45",
-			"44",
-			"43",
-			"42",
-			"41",
-			"40",
-			"execution",
-			"\\",
-			"php_err",
-			"stack",
-			"logging",
-			"display_",
-			"error_log",
-			"\\",
-			"include",
-			"Location",
-			">\n",
-			",",
-			"1",
-			"PHP_INT_SIZE"
+			"40"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -568,50 +613,67 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "views/site/index.php",
+					"file": "modules/admin/controllers/AuthorController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1298,
+						"buffer_size": 3564,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1013,
-								1013
+								1026,
+								1038
 							]
 						],
 						"settings":
 						{
-							"SL.34.region_keys":
+							"SL.20.region_keys":
 							[
-								"SL.phpcs.Highlights.|aef5be8f2313bf31751230100e60e1c98af6677c108a047c5ef873cb5a44999f|region.redish markup.error.sublime_linter|32",
-								"SL.htmltidy.Highlights.|3ed4c79a23d9240600a77478b21bd1be646912ee5ec47d64773d9e88ff18c9d7|region.yellowish markup.warning.sublime_linter|32",
-								"SL.phpcs.Highlights.|dafa41a20139fdf52601437d9165be3284ec792ff8a461b4bbf201fad63f53e7|region.redish markup.error.sublime_linter|32",
-								"SL.phpcs.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"SL.phpcs.Highlights.|240409c85188e3ee25a0cda43d77da637911af6b7368a21e9fd4542bbcab16ad|region.yellowish markup.warning.sublime_linter|32",
-								"SL.phpcs.Highlights.|55f373a08c0802c7f993bef607a23f078ccf093e247344f4f683c3f2a8817ecd|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|47bf808f18221073f2a6b680b9560ff23d0ac525c3d57195340778e02440dc22|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|1f42c9ee2cfe88cf4303176f0712435c4e38e4eed17badc5c1d48b64225eff53|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|fa99cb6dbc76035b5ed63573b49c96ae50d54d6484cbb5bb252c1d328138c4b8|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|7fca4475d98f24f6a156a1e793e0bbe6ea7b22e0e13c2a741974085d8e645122|region.yellowish markup.warning.sublime_linter|32",
-								"SL.phpcs.Highlights.|9b9d84082ae34bc52614c55ae7af8ef38f1eb8f0b67536a7a7dfd92871a463a3|region.redish markup.error.sublime_linter|32",
-								"SL.htmltidy.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"SL.htmltidy.Highlights.|1c067debfa14dce18cc2a26a0c1c9de02d8d94b1d22e4d03ee36eba7ddb0ed97|region.yellowish markup.warning.sublime_linter|32",
-								"SL.htmltidy.Highlights.|d7eb4b25ce4c7cbfe0a86a7449f7dc0e3a8b58b7b51da72ac60daa699922718c|region.yellowish markup.warning.sublime_linter|32",
-								"SL.phpcs.Highlights.|d40f9008baef3bd21211c57ced7a276798e43deceedd9cf78b2321bd080faa7b|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|d3525d7b712bd98dc68da487c4a162655a0b2cbb9288b83bbfaa59771f8153d9|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|00974fd25628e44686e99a7e2679a96b233b5155d818bdaa5dc4647a22f7d132|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|2999520b736f7e28d1d11c639be830b39cd6763d2e6aa5093045418657d634c3|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|fcc55ab03532295f1b9d3ab8b475f75195a57a67c82f2601b2f1ef00de85f9e4|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|4d0206089f6986227fed22ce1a812492cb025248cfbe7781a2752caf0bfabb16|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|b79de239b7419128babdc55f6a83958f52ab2d4953f1da71e5516021a581614a|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|27efa46b8b370e77c0191ce6f597ac1831e7078ae0c73e7502ed2c49ad1d2bff|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|478110657d935aa7cd65f4236efabd1fc7af5ccbfcc44e4a32ae57a85122e030|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|bbbc43f6b9824b5ad1b8192bb38981c415e1f6c4ec037f9bec2a1084e2cddb78|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|9eb8a6e084745a174a79fb4ba69e08e399e8d8a11d7324a984c72533fe003c0a|region.redish markup.error.sublime_linter|32",
 								"sublime_linter.protected_regions",
-								"SL.phpcs.Highlights.|41778cac640dab30f41621b0517f6b2745d57ae35d19c2a8c68b117021cca04b|region.yellowish markup.warning.sublime_linter|32",
-								"SL.phpcs.Highlights.|d1a8a8bb636f2a9e6e90862a800a87f07ce062ca6af9be7165f3d9849c8c7fe4|region.redish markup.error.sublime_linter|32",
-								"SL.phpcs.Highlights.|37e8af710d247543ff6168d183bbfaf54293bc67121e24db6159a79f241c465a|region.redish markup.error.sublime_linter|32",
-								"SL.phpcs.Gutter.|region.redish markup.error.sublime_linter|dot"
+								"SL.phpcs.Highlights.|c748f5dba81acfab445f608d11c00f0ee40db0e08b151437015f2ef308ae170d|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|ae057eeff8344dc4c12691e42f12e620551895f19e0f71f1739a5272ee9f268c|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|148bbfb6842966a046af131870f5b76b2a1e4690667a9e191ac879a20be4356b|region.redish markup.error.sublime_linter|32",
+								"SL.htmltidy.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.phpcs.Highlights.|01b1555c8fb5750e77ccb5e143da0b67e390d81a90a5575a8c3bc118099c4960|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|a0de651073d1f30869bfbe903522f5853b353a0f7b4a5ba49b0da5542c6b25e4|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|e5edd328deb0ea0c34ec2dbfd4c67573b36ed32bf86c4ac2c62647e091f57af4|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|9775bd38c66def257f925877334397eeb9f355868dd4988a1d4addea0998dae0|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|26f21b054b27581766bd7b85cde7d500138c73a359c3458dfa10604523336078|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|a1e2d00d7a9271f42c10401f605003453031a989b232c179699cae7e339607c7|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|be8b121cb49ad694728871814ce23b3ddd19c4b813270a413462b18a8a9b4b8e|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|a5fa5378b9e1056721efb941d2ac65ae3b8a1701dfea048d7e00e6acc7a11690|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"SL.phpcs.Highlights.|c156b4e7ab00a02bd0ad19201f54551bd5c6e1b51f37e9f9e00ebc99b12b042f|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|d44d5669500fab0f27a5114a7e879bfc4d27630461541004411034b6947a76a6|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|c09d9881ebd567736d6130d16d46255afc75a459649e2417e48c2a11619e5f6f|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|213e8eab86c4bc8cbd4119b8f9b093ad2b3af44072ed7d72c4c98f8534153b1c|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|b0d5cc9fbf99032304e54c7f8ac5a9a5b9861efc63aab9867b07016ac38629b5|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|b0c63feecc337cc40e158a74b0be70cedf5536fe6bf7dff9440390b098cc3fd5|region.yellowish markup.warning.sublime_linter|32",
+								"SL.htmltidy.Highlights.|82dea54cc442238deb1ef6219322bd65d1631a3eecacbe3dc2c6f10e7eb110de|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.phpcs.Highlights.|fcb87205e5e47420786a6950a41b5daf3aee2a25042af226b4a1ac3d25b58337|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|600688665ab1266979330bd25f5026f421e253f9edd7fb1befdfef1c44e5c3be|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|52e310becc9c009a9867d2a842220cb6a96e78659dd22c42b2c9bb177e8d442b|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|db348e1a500c0a9f94b7251d434cd33821210950cc8fcb095370beabfdce4b3e|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|62b673315a171607d99b41a68b0a6219e42ced2411b77bbf8929ce84340b9efc|region.redish markup.error.sublime_linter|32"
 							],
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.clone": -1,
@@ -619,12 +681,27 @@
 							{
 								"close":
 								{
+									"1":
+									[
+										1074,
+										1075
+									]
 								},
 								"icon":
 								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
 								},
 								"open":
 								{
+									"1":
+									[
+										787,
+										788
+									]
 								},
 								"unmatched":
 								{
@@ -632,31 +709,21 @@
 							},
 							"bracket_highlighter.clone_regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -667,74 +734,84 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content"
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
 							"bracket_highlighter.locations":
 							{
 								"close":
 								{
+									"1":
+									[
+										1048,
+										1049
+									]
 								},
 								"icon":
 								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/square_bracket.png",
+										"region.bluish"
+									]
 								},
 								"open":
 								{
+									"1":
+									[
+										950,
+										951
+									]
 								},
 								"unmatched":
 								{
-									"1":
-									[
-										1011,
-										1012
-									]
 								}
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -745,68 +822,85 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content"
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 432.0,
+						"translation.y": 416.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "views/authors/index.php",
+					"file": "modules/admin/components/Log/Log.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 585,
+						"buffer_size": 3750,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								416,
-								416
+								3375,
+								3375
 							]
 						],
 						"settings":
 						{
-							"SL.50.region_keys":
+							"SL.21.region_keys":
 							[
-								"SL.htmltidy.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"SL.phpcs.Highlights.|6694566eaee5fb5c68ef69128ba920244858d43b03c646929d7be602b04bb6cf|region.redish markup.error.sublime_linter|32",
-								"SL.phpcs.Highlights.|03b988d21fe16e8ae304e630fd21c93a51ba0eaf9f0c6cb5ac5d7e49394eac9a|region.redish markup.error.sublime_linter|32",
-								"SL.phpcs.Highlights.|426c07dcbf3d3395b7f40d66da0374447af5180af5632745873e8061ec0d52fd|region.redish markup.error.sublime_linter|32",
-								"SL.htmltidy.Highlights.|f5a46dcfdf6967820dc6d4e3084019f1fa56cb4ac93029a931f1d9f27b3d1901|region.yellowish markup.warning.sublime_linter|32",
-								"SL.phpcs.Highlights.|5edce7e52734d8a7436519d2a16443bb437972177fb4fdca97d35a5a3ff45c41|region.redish markup.error.sublime_linter|32",
+								"SL.htmltidy.Highlights.|5a20f8dad25e21ce9407e55792b2c1a0aa75ec1c5a3781c800e0bf63b8a53749|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|3f75e0be6d0239fe16aeee064639824b873853e492964faa68adafe3e67d92c3|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|9fa7adfcf6740faf7d70b0c7cd9668bee55aff3f3c1e24e727a6c6e8cafa6d76|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|416a6d1c42541ad9ec11b3212c9397c7228e75a0f3afc27b33dacffce617a226|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"SL.phpcs.Highlights.|afcf493687b2e00be2b85d7a23c80af9b06eac9068d527d3e6afe8adcba054fe|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|33a5348d12d9824986232672639dc0a182cd149eb9b22503a13f261363b8fa05|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|bc7f9cd1fccd940c11d9ee197faf171fc58b83f76dd15d809d6ec38b50a9be26|region.redish markup.error.sublime_linter|32",
 								"sublime_linter.protected_regions",
-								"SL.phpcs.Highlights.|1fc5768c5fc55006348f2b3caea2ac2d2229384de0dba37861defa35faf930ab|region.redish markup.error.sublime_linter|32",
-								"SL.phpcs.Gutter.|region.redish markup.error.sublime_linter|dot"
+								"SL.phpcs.Highlights.|97b5347b3d5643ab9cabd8b845034f0716ab2fac9863dd4d2c7c2c263d6a0ea5|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|e2c1d7d63a5fa201b64f50632bbcfa566d60a5843ae98bc50f11e6aaf8af48c5|region.redish markup.error.sublime_linter|32",
+								"SL.htmltidy.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.phpcs.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.phpcs.Highlights.|75e3bd059ddc96d5bab5e6f002497f5ee8eaff483ff0a981e8d293daa74aeabe|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|872c353b6103197679268f2ef3e2a7e6d15f0ff8585ce3a0925852be7a0ad836|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|32a52850a4c2f54aee82398760a8e9a671f398ad497d498081cb06df0a41c201|region.redish markup.error.sublime_linter|32"
 							],
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.clone": -1,
@@ -816,24 +910,24 @@
 								{
 									"1":
 									[
-										11,
-										13
+										946,
+										947
 									]
 								},
 								"icon":
 								{
 									"1":
 									[
-										"Packages/BracketHighlighter/icons/tag.png",
-										"region.orangish"
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
 									]
 								},
 								"open":
 								{
 									"1":
 									[
-										1,
-										3
+										918,
+										919
 									]
 								},
 								"unmatched":
@@ -842,31 +936,21 @@
 							},
 							"bracket_highlighter.clone_regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -877,26 +961,36 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content"
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
 							"bracket_highlighter.locations":
 							{
@@ -904,24 +998,24 @@
 								{
 									"1":
 									[
-										419,
-										420
+										3388,
+										3389
 									]
 								},
 								"icon":
 								{
 									"1":
 									[
-										"Packages/BracketHighlighter/icons/single_quote.png",
-										"region.greenish"
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
 									]
 								},
 								"open":
 								{
 									"1":
 									[
-										416,
-										417
+										3332,
+										3333
 									]
 								},
 								"unmatched":
@@ -930,31 +1024,21 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -965,129 +1049,133 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content"
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 162.0,
+						"translation.y": 1404.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "modules/admin/models/Author.php",
+					"file": "modules/admin/controllers/LogController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 885,
+						"buffer_size": 1046,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								695,
-								695
+								65,
+								65
 							]
 						],
 						"settings":
 						{
-							"SL.77.region_keys":
+							"SL.28.region_keys":
 							[
-								"SL.htmltidy.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"SL.phpcs.Highlights.|2ebbc2ba0f81564dc261a695a1abdb2cda3fe0964f14eed12fc67a86cbfa674e|region.redish markup.error.sublime_linter|32",
-								"SL.phpcs.Highlights.|ad7977fb36731890db444105c2482bc334482d6a36680da75d263f548bf14e3f|region.redish markup.error.sublime_linter|32",
-								"SL.phpcs.Highlights.|434c27034a3cf3ec51592f693c0be588309f5cf918b99b18fc1ccda61f544f03|region.redish markup.error.sublime_linter|32",
-								"SL.phpcs.Highlights.|3ab87a4d49f1e4bf1820169d046da45ef035e6f134c199fbd27274239901caf6|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|f45f41f7da7e9b04528e4ba54adf1481450d670c341889b8432c75dba2665403|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|4ae2c8284ca7fcc6a6c4d00fd51b3a86540b7fc1c78ec29cc4887644210a5954|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|aa36f355cea69c1c0019dae4b42e7def0e4ff5c4e39e3bb3cf014c6c17eaa13d|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|c427752b3bed66bfff1a6372294fd4933f2d44839b19ce23bc10939d8160a31a|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|db088eabe978610f9f96ac00e64e9cbe0f1290cbfa083b2fb22512efe526ac23|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"SL.htmltidy.Highlights.|090adb07b29adf6a850529fb19f109152cb8ee62d3177237863478f60b28740b|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|c3d89b12c861790243424281c6ccf8002c4906a7eb810b49c1d5ed6160be99ea|region.redish markup.error.sublime_linter|32",
 								"sublime_linter.protected_regions",
-								"SL.phpcs.Highlights.|d62a27f1e9c62aeb8c41e1957b724d6ea9670da2c362cdc5f6defed9980d520f|region.redish markup.error.sublime_linter|32",
-								"SL.htmltidy.Highlights.|83ec6a93bac8b70838b32e1cb986179b01549c75a3e1172880b9ddc0a381702d|region.yellowish markup.warning.sublime_linter|32",
-								"SL.phpcs.Highlights.|81b12323a7b0316109fccdd482bcdc849b5ef3f425abe536c9ca1f5a62f08a04|region.redish markup.error.sublime_linter|32",
-								"SL.phpcs.Gutter.|region.redish markup.error.sublime_linter|dot"
+								"SL.phpcs.Highlights.|eb5990814699a06997f8d69b934c379136771712fd8ef519990478678b594999|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|7e679671297fe8a114d7930fdeaef888a436fbf8783e186077a0f7fd733a5dd5|region.redish markup.error.sublime_linter|32",
+								"SL.htmltidy.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.phpcs.Highlights.|5b66319c118f99854c20c2c2896afedf121a9944ec36a4d46cfa775a975fdd7e|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|a0a6b6c78e4d39e5f3e22f8851f3af011b58c14f6633e01b6a935a9d0c911ad8|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|0963377ae3f51a95892c0ae2f6015b347e46d7b837b120bd3f41f05cc16fd997|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|624ce0c04c31665240d3ab25e3805d5d67207d8305fc824da43cf5b1717e56ba|region.redish markup.error.sublime_linter|32"
 							],
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.locations":
+							"bracket_highlighter.clone_locations":
 							{
 								"close":
 								{
 									"1":
 									[
-										695,
-										696
+										591,
+										592
 									]
 								},
 								"icon":
 								{
 									"1":
 									[
-										"Packages/BracketHighlighter/icons/single_quote.png",
-										"region.greenish"
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
 									]
 								},
 								"open":
 								{
 									"1":
 									[
-										689,
-										690
+										272,
+										273
 									]
 								},
 								"unmatched":
 								{
 								}
 							},
-							"bracket_highlighter.regions":
+							"bracket_highlighter.clone_regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -1098,33 +1186,114 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
-								"bh_curly_content"
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 378.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1132,33 +1301,35 @@
 				},
 				{
 					"buffer": 3,
-					"file": "views/books/index.php",
+					"file": "modules/admin/views/log/index.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 734,
+						"buffer_size": 1316,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								609,
-								609
+								641,
+								641
 							]
 						],
 						"settings":
 						{
-							"SL.72.region_keys":
+							"SL.29.region_keys":
 							[
-								"SL.htmltidy.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"SL.phpcs.Highlights.|37d35e36b31bac21ba92bd17cd0210f7c3659b69a9a044e6a50ee2c375b1c4c9|region.redish markup.error.sublime_linter|32",
-								"SL.phpcs.Highlights.|a3be36c5bfc568d8b63e0b01136787b6ab6f1072dc803eca047fd87714bb8755|region.redish markup.error.sublime_linter|32",
-								"SL.phpcs.Highlights.|17f66cca8e64b7515cca80098d5060afdc7963663cfb719f5dd7853bcd4fc129|region.redish markup.error.sublime_linter|32",
-								"SL.phpcs.Highlights.|fec067de80d1df2414c70849d1c7320d6a602ccb652614b65c1c4c658bef7d24|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|0e270c9608be120b215d0871c05241ecde84d84490c1855212c42b433861c7af|region.redish markup.error.sublime_linter|32",
 								"sublime_linter.protected_regions",
-								"SL.phpcs.Highlights.|5a6853f27b99e9c6ae2e061f70779e160d966e85ba81f6e483d7c6f719076c88|region.redish markup.error.sublime_linter|32",
-								"SL.htmltidy.Highlights.|eed2375d0797d7e378e9d614afe0a8135b43a1e8e4b85599d926a77123f6e243|region.yellowish markup.warning.sublime_linter|32",
+								"SL.htmltidy.Highlights.|312fe01d5981b1b1b6133e80e42685851f4b65e4e4965e1127ccd44afe88c2de|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|74a25308189a3d4f6dc197eed94860f29b383f45511f937ecd15f5d788623df8|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|af9c884e13f14b6fc0e5b987e7d4fcab475f657228fd4694b4340219843c7f06|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|5676bbd25e567863b738ca3acd8d6bf5f115c6a8757698cfab4e300157a910c7|region.redish markup.error.sublime_linter|32",
+								"SL.htmltidy.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.phpcs.Highlights.|17add98538e2663fe8b1fe90a0394a5c4b7fc069c5c4540b3a5632474fa33d36|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|87b674854833adc1cba40f15cc4e73979c0caaac9e0d01b387762f7f0cbe458a|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|a2d5cacf33beb62e5b6d310a3c77f51b4db727415023568adb8d2ac6e0ad5543|region.redish markup.error.sublime_linter|32",
 								"SL.phpcs.Gutter.|region.redish markup.error.sublime_linter|dot"
 							],
 							"bracket_highlighter.busy": false,
@@ -1169,8 +1340,226 @@
 								{
 									"1":
 									[
-										11,
-										13
+										788,
+										789
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										604,
+										605
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										753,
+										754
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										558,
+										559
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "modules/admin/views/log/view.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 927,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								24,
+								25
+							]
+						],
+						"settings":
+						{
+							"SL.43.region_keys":
+							[
+								"SL.phpcs.Highlights.|75f7b162fbb18f4008ee695d9c7ade103fa2b1451b187ef97cb700aa2b8d90eb|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|c08754400bccd9ea114a6e92534fd211a9129265d0df398a9df2385e33db6d4c|region.redish markup.error.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.phpcs.Highlights.|8963a3715e5d2ed1eecf8815a0685ea8f0ca3df68d02ed8fdcfb0eb8c695bdb4|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|0589904076a6e0947c4d5477f1ad52a4040821f0fc6434ff9e7ad1acd1a80291|region.redish markup.error.sublime_linter|32",
+								"SL.htmltidy.Highlights.|557a85ecca8bf098fcace6364cb4e3edeebf1de24bbf31410bbe938e76360da7|region.yellowish markup.warning.sublime_linter|32",
+								"SL.htmltidy.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.phpcs.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"SL.phpcs.Highlights.|ed0462b42360357eedae68832f07dc5d9b7658ae508859ba7ce7ee22bf23bb03|region.redish markup.error.sublime_linter|32"
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										10,
+										12
 									]
 								},
 								"icon":
@@ -1195,31 +1584,21 @@
 							},
 							"bracket_highlighter.clone_regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -1230,52 +1609,47 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content"
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
 							"bracket_highlighter.locations":
 							{
 								"close":
 								{
-									"1":
-									[
-										609,
-										610
-									]
 								},
 								"icon":
 								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/single_quote.png",
-										"region.greenish"
-									]
 								},
 								"open":
 								{
-									"1":
-									[
-										603,
-										604
-									]
 								},
 								"unmatched":
 								{
@@ -1283,31 +1657,21 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -1318,26 +1682,535 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "vendor/yiisoft/yii2/helpers/BaseUrl.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17402,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7522,
+								7492
+							]
+						],
+						"settings":
+						{
+							"SL.42.region_keys":
+							[
+								"SL.phpcs.Highlights.|f163d6e00243b598d7f7dd63376a4d9d586512f70fbf5a8523506324279f7d3b|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|18433b3c88d8c90edeb47796a6c3cc42d35e20abf6ccf837710eab5920bc3560|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|463d19b6b2e4baf1a5c07efc7d919e0ccfb696559b71f8342150f9ba24eaedf6|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|959820294e20989ac03b71a44e1c87bdd640998b9390ffd5a42843b1778ffe38|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|cb2afdfd3575d60eaa6875980e27011ac7aff46f77792715061fe90e7c7afb60|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|a55f431bb6cf67c134f7189a950d93b483239675fdf33174b879c844b42b5346|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|2cd6316639f9eea162349d99a85e4f0109b419bbf5718484ef380cc9649fdb36|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|67df11b56eff8521da94bd65ab33b92e9b8c6a528d1ea1ec46563b60f2cc4cbe|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|885b62ec50a599b72e71ec32eecb70c0676eccdd802c7a5a2e88c7d99cd2fb48|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|34a27157c0f7be04240fb4706d4b02c5c7619203e4a708d75403903bce45164e|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|7de97c7ce6f68d723bdcc9e411d861e914f2c8ad5834b66fe1924e4964c116b9|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|1291664e7f240a87bbf81ad955610f2a8ff299d84da9674273f16d97246903be|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|d2d0b1b6f647db936436659c3cb92b9cda157fdba6a24858a40dc3ced75161fe|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|ed58531066d384d04476f0893d0f9bb6fa8789cc1dbdce9b0a4bb9c5a117b219|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|f1314b34c6168f22357213cb927880905919098e4689d4e1c7e84259e5658031|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|4770469f20f5d0194415510943605d4ca099ca2493a63d383368b59ac1420b56|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|05e0ff1bfcf02a3c5c7c54d46728012830f72ec766071c65dddbc433d9d85a9a|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|3c94d987a1ef17483f56829bc14a4ed48cdbfd94dc38011000d3b6e37a2aabe4|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|ce749564c521fbe29891c719dc11eedee34bc24bd46a40f3897fe7a7347f34da|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|bf41d1679fe19ff6d32b8316e388614186f0b715a9c49e4e0d42f54d9937a5d8|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|f56e5b1f33f71f000172c56d66b6cc87912f5eea3e43608e83de89cea0b1bae1|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|e55c9d6f13e1cd09e3143e432cdec7bbe3d8a6887dbeee872592c7d74eea8a42|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|8c767dd557c130872564f339e3235802899394063ce9aae2778a796c5093e202|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|6c14bfae0762db638ad852dd6b8eb2464c59aeb1cc18e81ca7b2d8793c717c90|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|26b4ebe02d4c67ffdc707d18cc430c5ee246230c6bee008eb63053aea4766131|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|c360a747e882f8b3cc496cccb0024ee625d22aeb9cffd15abd074fff67b3b366|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|49ab289f4075b4f313caeb1e3f1c0110e73bdf81de763141a99f4f6c15900484|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|9811abfdf3447a648ab336b7c824043c31cfe8049047212066160422b96ee0b9|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|391feb584673b4b6e4e4fb4281dc5629f65bc08fa2a0358438b71219dfc41672|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|c060940e5a9cf2266abdf1b29c7d32e2df05ada89a55f7eb434bc3e6ad6d9b7f|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|06ed5d2ea660f0542bb6a08dff45d16823bba1e7f8a7489cc02e1f3d2fdc1c87|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|3117e4bf9e994f1af2534402416400d0c2fd3c3272732d1e663a3409fb7c24da|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|809e1a148b932857ffaf46048101ade0dc4a225b527a7588579f951fcffaba8c|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|2606dbd0acd4ac1b7e0bebbef02f31b86ea84bd12e1156dd7aca611bf2676488|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|863459a7d21544ab1850186021d2d133176bf3fb82fc98357df7f499d609058c|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|a20233275260be4343a7f755d127201b5821f854de8b86a22908c4edbdf6ff04|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|9abaa0ef2858a18338fcc37d7a717c430e5c13fafa9edb459bb3eb16c0510e02|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|7c35800168ab811db1296f50ac336a9af7f9589ab99f11cc47d2ae697184956b|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|d33689712039772eedfbc2021d4b4721e487a2bf7212996eb267d6c8d36e3729|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|7a790f5ce79ceb1fe4eddce4f4e8e4db0e25d0e6316a81ee953e76f512174d1b|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|f426b4bcee342585384df5d5a08937e0a47a9c5aff7c708547dcfe176ea9564e|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|cc16ada05b5538ad56d868fa89e28a1f2e7dcb4729cf0cbf9c715d2888accbdd|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|9dc093890cf748f19fd0279bfb34a9834a4ecb25aa685234b7bbdd4fa843900d|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|4862848891fa92cd8168c46525cdfb72dc279ddcb7f053b70c7a16d95b2f904b|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|d4f6670f1a746be9fdd5fe4c5aa8efc0bf3e3a8d8bd6f5b8fcf1a47c41743324|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|cd83c3792eeac186ca3723731c7ad032fd79af10b263a792ce0d7a5f4206e25a|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|14d7a4d6681bb39d9bfa42418dcb39b7d320c88a9b4cae9b838adb4acb7a3977|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|02c3b4aef31d51b87d71dd1713af03b3ee30ededbc9151c64ab6971350d4384a|region.redish markup.error.sublime_linter|32",
+								"SL.htmltidy.Highlights.|fe820a8de953b75b8c31fdf2f0202b61ca677574522342c55ad46ea3baba74fa|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|3932bf665f134c684a0e9c59d304059a9e0dd4baa80a00a3c7ebb5343647b373|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|b9dd1b1bc71fe05977249add532b81647b7f12afb94775d51cdd5da7cddd57d8|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|10a536ea417f810e4b3802ea70cae3cfde3a0f695f88fc3063fc380c548ed4e7|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|07611ca3c1071ad0d12aeb96e289347931eaa7bbefbe221f277ed84babcf4948|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|55c80db40b6cc4e7a46f8990298a52fdc114a2f5c1ce9e241d91c0b04679947f|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|70c6b8c8d4e06429654f64901632a26fb6c7845824a871d43d47e0059b104cbd|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|01f60008104a42be3d69027802338f3bdbe3f300f09ddabaa3b6a992c089c7fa|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|9dfd9ae6523eff09e3e5a3afb3637ae3118495c09b05b39a3f9aff7f81207ea8|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|4e508be9ac6b7b3d407d2d9bc47702a3602c28637da4e90990ccfd694b3af536|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|80ccf43415a4b8985db47509b444ab84b843cc52f551296cc7541c7e3b931866|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|e26b4fcc18c087dbab9e8248a8f97d04ece48715050e3a96e9d12bf7949645d3|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|cd887b15736c8854c18a95bbae3852e8d110250adaf6fdf1139e0bdcd87d7803|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|dce7bc04e755ad0b0ce1352c6347c6cd4dc6be1ff0a6b8d658a287409b84077b|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|0c7ae436a9c09cca98533a160f267262de7130e0c6f883e77ecc9cf27b710a3f|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|37872a70266a2b1dbef910ed29293db0d7530b50212e53c9a21018cb4a8524e6|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|a475f1feb0fdc8d2e0cdbf5b60929778dbfd25d00a5f0c4334097c5e7fdba1c3|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|35ed5fb8caac8cb81fa52e62e5dddcbe447c7c44f8eac0d566899c87c480345f|region.redish markup.error.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.phpcs.Highlights.|0c42982a4210a01bfc7bfb57cd7a9abc51ee32987cc63fb63a847054a25697e8|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|4dd5a3eacbdaee9286e4ffd3a60eed344cf707093bfc2d4d1d9224abb684c8ad|region.yellowish markup.warning.sublime_linter|32",
+								"SL.htmltidy.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.phpcs.Highlights.|890ed3fc8d2b6a4a7037ff6f5692fc45a6677ce33867c57e700359461bfd4b4f|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|c80f58cde407a2b72b97505c254bfd998121bfb3b73ab54e3e7d6c01a8b83a20|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|2fb65f55c54b583e16e4b01e7dcacf4168ace1f9dc99b6d50dc33aaab31c7e81|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|7fa76fbf06449744fef78b1cce0828a4d3bee8ced003f286086f14cff00a9749|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|6cdce13fea49d31a15b44bd0e5bf7463df0332a122f55ba25af29906a65c875e|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|940509302d2a3cffebca4598b926e55e11949b040de874edd9cb9aa79955405a|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|0ac8a65646427455bfe0b7b25725c845700d3a3182f54e5fa6c19096ee82487e|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|d9bde43f2242c056baa170d8e62be296295926e6a8d7996e3e30da49c47308d3|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|6a2b83812af136cc778fc99a9b2f02fa21357c1f1a020857bd3231647800af60|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|cd4bc7a33ec4ece163b5b7db344a14ee94b6946c11fe7a7aeea0eb7d90b65128|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|f7f053ea34c72dc3685f6ec07d7889cbb3b5f826e8865032371bae77e3ed427a|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|46f0c82b146fccfeb79989bf4c22c215929678df0f66635b0180647e5a4acbbb|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|88a3763fef45f4696de947d1bd44e9bb9b8022b35ba764fb44f18976ef738e97|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|e0f21c837d7f910cd637c84b3f69b95a72e292f4e888207ea86be617a90f5c19|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|a3be3286ce4bdbd41b6379486c820a65d6e1df03c3a2ce898a73e39c717fabd9|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|ef7df8398f8a571636a41688080c4b0d8eb1b11929d86b366705c33607a125be|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|60768e63c8d89c380f27ac5f62a083105e68daf00ceb11d93a0ec2d7d90a2da5|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|04f9eaef35db9a515252edfa8eb0524ed9241bf9f5ef3248afcb0bc298499a8d|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|11eb3db3a4d20a58d7aff487f7ba889dfc2f17157e0e77d686ad251c1b7c78cb|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|4f83a11998be4b98c290775d493cb827d6ee2cd3735677361bc667ab8a2ee369|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|c50424dff0016af05891fa57c7f23ccbb4be9b1a338288cb36a7f3581a8ca676|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|e1b1852508c512753d5bf40826dda55f603b90b0401a0d476ac8e0ae29833ff3|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|7a24e6f820e46d6c3c17d81094d2ce53e9a21e8948bf4960bcf7160a0aad0d4f|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|e5ccdb5bb93f37664d4a37013b44248dddee5fd4d1edd1f8567c539a113a5c5f|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|abb48d9fe596502418fc282a6984e68b32d4522d00fd20950f7e413c444f595f|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|61c2ec3b8f381a227bef16aa249791088fc9e877355a0339bf5d45e07ca9cbd6|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|10a63e8a6304eaf951f7e1cb524edffe624a8068e7693da45e51efe21f7de8c4|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|fc125afb28092aef5d9731b5cf0472d6ded3f946ef677fb5dec5190ddbfc91be|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|c8127bbbe7aec3a9df4b5bcd0e5043ab258ac41ccb02e958d55bbd6bb6d1e479|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|f1fbca6c2d59ef4ac1806dbeb027d3ee9d1135b82547aa6382b9b2324c8bc5a0|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|901ad133f98aa5ab4c55338143ff97ca2d895a14d3054b5904de47c9a6f867fe|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|0550c83ce3fa5398619861b2eabf8d2d53cb3a4c6889a5e134cd4403c04a4fb7|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|cbbe078a752500230a3ed83fbde9aeab51f7c01152679759e20d7daa74a1b965|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|a7b1f45731524de60a1b5992799718394d68469abd3ef14c3399edd99438a669|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|473f0d4573f44c8e8504355cf187f62c4145744483d4d22c5768fc0aa4c8bd10|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|fe403d25542ab3dbc51dcde5eb0159803979e6bc388acc98a41825cef7938b47|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|26647db05b7236df31af130a9e7e25352d7090bcba34b379d5220c012c0f9f48|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|083c58b36c789316d2c42d6e586a2b2332d83bc14b9f4d72f0652a467d384fca|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|01c625a1bb8f7b24007a2871f08d879085875575a9ad886ea15fccc5b38c15e6|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|744006da900cbc19e0f427a0345355426cab2967164bb3214f72661d1955a0ba|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|79c3eb849c65bffb35d4b42255d5a38608f6f612320ea2277bc88b4d9d36cda1|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|2217899fd258a6156f5a2f91929e884ec39b299e7c3d04c542b6e213d155ae24|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|14c699ea41168cc29d7fe94be1c9c94b0f16cd6f039a96a4c4eeb545cf5a7dff|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|550cc26cb893d913816f557a24fe377c3ab07c144863f18ce1f4c341186f1271|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|75f3a0bc384a16c2509f3bd2f0f0239a0bd3dd33a0a1e052dd6a1157b0138ecd|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"SL.phpcs.Highlights.|ff999c1cba8c4f3b53900e1d54f22f188b67857643a3b6e002f04c9f192b0147|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|c7ccac4824c883db32500d65671f1e4da1f6b6aa2323f50b05d9285f72c87fbb|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|58ccbfed3ac78d1912cac55c0425c3bde8d905cc50704767e3cf9ced1c9c6ba4|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|07a6c01efba04c91a7656f12f6cf2bb71c887dcc415b9d2fb73ff1fb2228c017|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|230ea508e26785baed52a008becd41dfe529fbc913c86d9519b52862ad00553d|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|798830b4a7f9ce07acb8b1bb7536248ae675806c32ec9f9002e5c03dc0e1678d|region.yellowish markup.warning.sublime_linter|32",
+								"SL.phpcs.Highlights.|f5464758c67467ec620653d67ca434b6700f500f8d3ca9d605d2ecc66c2a0acb|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|c7df6b6e7e638b5760f8b3715ae1d265cd7d12706bebce37391f2cdefd837d1d|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|6c679fa6866b71233959eb35ae4246bc25e2bff8bf4216b0535a6ff66abf1aa5|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.phpcs.Highlights.|d53bfd5911149f1ad3231881e58fbf32dc7f8dd06dd6ba916901607b86d12144|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|7064cb8f4350934349ba68becb2f2d65f94b5aeec1206ac71f84e236beac5b7e|region.redish markup.error.sublime_linter|32"
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
-								"bh_curly_content"
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3138.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "modules/admin/components/Log/models/LogActions.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1117,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								312,
+								312
+							]
+						],
+						"settings":
+						{
+							"SL.24.region_keys":
+							[
+								"SL.phpcs.Highlights.|94c4c1138970a64399ae67620a4679540e05778be6d9ebc70917c2c71823f204|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|ecf77b521f549d5de2e906ebdf09dcf801571c819346f58ed90659fff26b2535|region.redish markup.error.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.phpcs.Highlights.|ca8ece91c8c9777227faffae2268a5669cdd9e3b56b5cb3ae16b92ad67206ba4|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|219d624f69beee6c1d146f08b341b1964ae53a95fba9a733efb088d0c2cdaa68|region.redish markup.error.sublime_linter|32",
+								"SL.htmltidy.Highlights.|3727d6bc9c8870c862c4378bb8426e93f162bc53e994f943d8190570a5076004|region.yellowish markup.warning.sublime_linter|32",
+								"SL.htmltidy.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.phpcs.Highlights.|982fcabba77047c1b57d37e7b0b8614f60c943a914f845f527a6603bc1dd6a7d|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Gutter.|region.redish markup.error.sublime_linter|dot"
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
@@ -1347,35 +2220,131 @@
 						"translation.y": 162.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 7,
+					"file": "modules/admin/components/Log/models/LogValues.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 70,
+						"buffer_size": 1102,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								70,
-								42
+								145,
+								147
+							],
+							[
+								166,
+								179
+							],
+							[
+								201,
+								211
+							],
+							[
+								238,
+								247
+							],
+							[
+								269,
+								278
 							]
 						],
 						"settings":
 						{
-							"SL.57.region_keys":
+							"SL.26.region_keys":
 							[
-								"SL.htmltidy.Highlights.|0d7bf4acbbe0ca244551593b0f03a35c7679eb053176f783688f0ff6074cade0|region.yellowish markup.warning.sublime_linter|32",
+								"SL.htmltidy.Highlights.|bbd79edd6f73f962366a84d1e2c4667f3730975733967c3d1ea2e5ab42684c5c|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.phpcs.Highlights.|09354853816e895311266ef3e045cbd4e84312e0d827bcd034beb49ddbb9d839|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|37590f9134c8ce78a7e2a22a4d244e3807bc82997843a9fccdc434968644453e|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|8f9ad1ec30a1379a35f04de46d57566816add477681c2d8526ac4095c34ad43d|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Highlights.|52c23cebf09977e8518b164cf2093017f3c7c76747adf9ee633634a6a49b02b4|region.redish markup.error.sublime_linter|32",
 								"SL.htmltidy.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
-								"sublime_linter.protected_regions"
+								"SL.phpcs.Highlights.|1ea935706de5ff1918a6dddf2823cd0dd6caee282f9abb5326eb3885b056c95c|region.redish markup.error.sublime_linter|32",
+								"SL.phpcs.Gutter.|region.redish markup.error.sublime_linter|dot"
 							],
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
 							"bracket_highlighter.locations":
 							{
 								"close":
@@ -1393,31 +2362,21 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -1428,35 +2387,46 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content"
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
-							"default_dir": "D:\\webserver\\OSPanel\\domains\\bookcase\\views\\register",
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 108.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
